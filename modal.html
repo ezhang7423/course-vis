@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="upper">
+    <div style="display: flex;">
+        <div class="button back">Back</div>&nbsp;&nbsp;
+        <div class="button forward">X</div>
+    </div>
+
+    <div class="preRequest">
+        Math 3B
+    </div>
+    <div class="button forward">Forward</div>
+</div>
+<div class="course">
+    <div class="header">
+        <span class="name">Math 4A</span>
+        <span class="unit">Unit: 4.0</span>
+    </div>
+    <div class="info">Linear Algebra with Applications</div>
+</div>
+<style>
+    body{
+        font-family:Avenir,Helvetica,Arial,sans-serif;
+        color:#444;
+        font-weight:400;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .upper{
+        display: flex;
+        justify-content: space-between;
+    }
+    .button{
+        border: solid 4px #004D9F;
+        border-radius: 10px;
+        padding: 4px 7px;
+        box-shadow: 4px 4px 2px rgb(0,0,0, 0.4);
+        cursor: pointer;
+        transition: 0.3s;
+        font-weight:500;
+    }
+    .back{
+        background: #004D9F;
+        color: #fff;
+    }
+    .forward:hover{
+        background: #004D9F;
+        color: #fff;
+    }
+    .course{
+        border: solid 4px #004D9F;
+        border-radius: 10px;
+        height: 60vh;
+        margin: 20px auto;
+        box-shadow: 4px 4px 2px rgb(0,0,0, 0.4);
+    }
+
+    .header{
+        font-size: 20px;
+        margin: 5px;
+        background: #004D9F;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .name{
+
+    }
+
+    .info{
+        font-size: 16px;
+        padding: 10px;
+    }
+</style>
+</body>
+</html>
