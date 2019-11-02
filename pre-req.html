@@ -13,15 +13,182 @@
     <script src="generateGraph.js"></script>
     </head>
 <body onload="init()">
-<div id="sample">
-    <div id="myDiagramDiv" style="border: solid 1px black; background: white; width: 100%; height: 100vh"></div>
 
+    <div id="myDiagramDiv" style="border: solid 1px black; background: white; width: 100%; height: 100vh"></div>
+    <div class="right">
+        <h2>Pre-major Requirements</h2>
+        <div>
+            <p>Computer Science 8, 16 or Engineering 3 </p>
+            <p>Physics 1, 6A, or 21 </p>
+        </div>
+        <h2>Upper Division Requirements</h2>
+        <div>
+            <p>Math 108A-B, 111A-B, 117, 118A-B, 122A </p>
+            <p>Math 111C or 118C </p>
+            <p>Math 145 or 147A </p>
+        </div>
+        <a href="#">Other</a>
+    </div>
+</body>
+<div id="modal">
+    <div class="course modal-content">
+        <div class="header">
+            <div class="name">
+                Math 4A
+                <br>
+                <div class="short_name">LIN ALG W/ APP</div>
+            </div>
+            <span class="unit">Unit: 4.0</span>
+        </div>
+        <div class="info">
+            Linear Algebra with Applications
+            <br><br>
+            <span class="extra_box button">
+            Math 3A
+        </span>
+            &nbsp;
+            <span class="extra_box button">
+            Math 3B
+        </span>
+        </div>
+    </div>
+</div>
+<div class="c">
+    <div id="child" class="child">
+        <div class="container">
+            1
+        </div>
+        <div class="container">
+            1
+        </div>
+    </div>
 </div>
 
+<script>
+    // Get the modal
+    modal = document.getElementById("modal");
+    child = document.getElementById("child");
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.opacity = "0";
+            modal.style.visibility = "hidden";
+        }
+    }
+</script>
 <style>
     body{
         font-family:Avenir,Helvetica,Arial,sans-serif;
+        display: flex;
+        overflow: hidden;
+    }
+    #myDiagramDiv{
+        border-width: 0!important;
+        outline: none!important;
+    }
+    canvas:focus{
+        outline: none;
+    }
+    .right{
+        width: 50%;
+    }
+    p{
+        margin: 4px 10px;
+    }
+
+    .button{
+        border: solid 4px #004D9F;
+        border-radius: 10px;
+        padding: 4px 7px;
+        box-shadow: 4px 4px 2px rgb(0,0,0, 0.2);
+        cursor: pointer;
+        transition: 0.3s;
+        font-weight:500;
+    }
+    .button:hover{
+        box-shadow: 4px 4px 2px rgb(0,0,0, 0.28);
+    }
+
+    .course{
+        border: solid 4px #004D9F;
+        border-radius: 10px;
+        height: 60vh;
+        margin: 20px auto;
+        box-shadow: 4px 4px 2px rgb(0,0,0, 0.4);
+        z-index: 2000000;
+
+    }
+    .header{
+        font-size: 20px;
+        margin: 5px;
+        background: linear-gradient(70deg, #002853 40%, #004D9F 40% 60%);
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .short_name{
+        font-size: 13px;
+    }
+    .info{
+        font-size: 16px;
+        padding: 10px;
+    }
+    .extra_box{
+        background: linear-gradient(70deg, #002853 40%, #004D9F 40% 60%);
+        padding: 5px;
+        color: #fff;
+        width: 100px;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        width: 80%;
+        border-style: solid;
+        max-height: 80vh;
+        max-width: 800px;
+        overflow: auto;
+
+    }
+
+    #modal {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transform: scale(1.1);
+        transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+        visibility: hidden;
+        z-index: 2000000;
+    }
+    .c{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .child{
+        display: flex;
+        transform: scale(1.1);
+        transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+        visibility: hidden;
+        justify-content: space-between;
+
+    }
+    .child > .container{
+        border: solid 4px #004D9F;
+        border-radius: 10px;
+        box-shadow: 4px 4px 2px rgb(0,0,0, 0.4);
+        background-color: #fff;
     }
 </style>
-</body>
 </html>

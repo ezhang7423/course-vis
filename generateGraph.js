@@ -93,7 +93,7 @@ function nodeDoubleClick(_, obj) {
     let clicked = obj.part;
     if (clicked !== null) {
         let currentCourse = clicked.data;
-        alert(currentCourse.text);
+        openModal(currentCourse)
     }
 }
 
@@ -128,4 +128,32 @@ function layout() {
     lay.direction = 90;
     lay.packOption = 4;
     lay.setsPortSpots = true;
+}
+
+function openModal(currentCourse) {
+    modal.style.opacity = "1";
+    modal.style.visibility = "visible";
+    child.style.opacity = "1"
+    child.style.visibility = "visible";
+    console.log(getChildCourses(currentCourse.text))
+}
+
+function getCourseDetail(course_key) {
+    let result = {};
+    courses.forEach((v)=>{
+        if (v["text"] === course_key){
+            result = v;
+        }
+    });
+    return result;
+}
+
+function getChildCourses(course_key) {
+    let result = {};
+    valuePairs.forEach((v)=>{
+        if (v[0] === course_key){
+            result[v[1]] = getCourseDetail(v[1])
+        }
+    });
+    return result;
 }
