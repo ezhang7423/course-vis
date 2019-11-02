@@ -1,0 +1,27 @@
+const data = [
+  {"key":13,"text":"13","fill":"#88ab86"},
+  {"key":8,"text":"8","fill":"#b8aeae"},
+  {"key":9,"text":"9","fill":"#a8febb"},
+  {"key":2,"text":"2","fill":"#ccddab"},
+  {"key":23,"text":"23","fill":"#bfa9ac"},
+  {"key":4,"text":"4","fill":"#d5f7c8"},
+  {"key":18,"text":"18","fill":"#a986e8"},
+  {"key":5,"text":"5","fill":"#dea1d0"},
+  {"key":12,"text":"12","fill":"#a5ad82"},
+  {"key":3,"text":"3","fill":"#edd3d1"},
+  {"key":19,"text":"19","fill":"#d0a7dc"},
+  {"key":1,"text":"1","fill":"#87f982"},
+  {"key":10,"text":"10","fill":"#e8a1b1"},
+  {"key":7,"text":"7","fill":"#d6f6d9"},
+  {"key":6,"text":"6","fill":"#bd83a1"},
+  {"key":17,"text":"17","fill":"#bafed5"},
+  {"key":21,"text":"21","fill":"#97eefa"},
+  {"key":14,"text":"14","fill":"#948d80"},
+  {"key":16,"text":"16","fill":"#b3a6ed"},
+  {"key":0,"text":"0","fill":"#90c3ec"},
+  {"key":22,"text":"22","fill":"#f5b9cc"},
+  {"key":11,"text":"11","fill":"#eaaaa8"},
+  {"key":15,"text":"15","fill":"#daf7d4"},
+  {"key":20,"text":"20","fill":"#9bcdb0"}
+];
+const pair = [[1,2], [2,3]];
