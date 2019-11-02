@@ -67,7 +67,9 @@ function init() {
             }),
             $(go.Panel, "Vertical",
                 $(go.Panel, "Auto",
-                    $(go.TextBlock, {margin: 10, stroke:"#fff"}, new go.Binding("text", "text")),
+                    $(go.TextBlock, {
+                        font: "22px Arial, Serif",
+                        margin: 10, stroke:"#fff"}, new go.Binding("text", "text")),
                 ),
                 $(go.Panel, "Auto",
                     $(go.Shape, "RoundedBottomRectangle", {fill: "#fff", stroke:"#004D9F", strokeWidth:1}),
