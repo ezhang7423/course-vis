@@ -5,23 +5,37 @@
     <title>Title</title>
 </head>
 <body>
+
 <div class="upper">
     <div style="display: flex;">
         <div class="button back">Back</div>&nbsp;&nbsp;
         <div class="button forward">X</div>
     </div>
 
-    <div class="preRequest">
-        Math 3B
-    </div>
+
     <div class="button forward">Forward</div>
 </div>
 <div class="course">
     <div class="header">
-        <span class="name">Math 4A</span>
+        <div class="name">
+            Math 4A
+            <br>
+            <div class="short_name">LIN ALG W/ APP</div>
+        </div>
         <span class="unit">Unit: 4.0</span>
     </div>
-    <div class="info">Linear Algebra with Applications</div>
+    <div class="info">
+        Linear Algebra with Applications
+        <br><br>
+        <span class="extra_box button">
+            Math 3A
+        </span>
+        &nbsp;
+        <span class="extra_box button">
+            Math 3B
+        </span>
+    </div>
+
 </div>
 <style>
     body{
@@ -30,6 +44,7 @@
         font-weight:400;
         width: 80%;
         margin-left: 10%;
+
     }
 
     .upper{
@@ -40,17 +55,20 @@
         border: solid 4px #004D9F;
         border-radius: 10px;
         padding: 4px 7px;
-        box-shadow: 4px 4px 2px rgb(0,0,0, 0.4);
+        box-shadow: 4px 4px 2px rgb(0,0,0, 0.2);
         cursor: pointer;
         transition: 0.3s;
         font-weight:500;
     }
+    .button:hover{
+        box-shadow: 4px 4px 2px rgb(0,0,0, 0.28);
+    }
     .back{
-        background: #004D9F;
+        background: linear-gradient(70deg, #002853 40%, #004D9F 40% 60%);
         color: #fff;
     }
     .forward:hover{
-        background: #004D9F;
+        background: linear-gradient(70deg, #002853 40%, #004D9F 40% 60%);
         color: #fff;
     }
     .course{
@@ -64,7 +82,7 @@
     .header{
         font-size: 20px;
         margin: 5px;
-        background: #004D9F;
+        background: linear-gradient(70deg, #002853 40%, #004D9F 40% 60%);
         color: #fff;
         padding: 10px;
         border-radius: 5px;
@@ -75,10 +93,21 @@
     .name{
 
     }
-
+    .short_name{
+        font-size: 13px;
+    }
     .info{
         font-size: 16px;
         padding: 10px;
+    }
+
+    .extra_box{
+        background: linear-gradient(70deg, #002853 40%, #004D9F 40% 60%);
+        padding: 5px;
+        color: #fff;
+        width: 100px;
+        border-radius: 5px;
+        text-align: center;
     }
 </style>
 </body>
