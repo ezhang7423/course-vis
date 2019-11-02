@@ -65,11 +65,13 @@ const valuePairs = [
     ],
     [
         "4A",
-        "6A"
+        "6A",
+        
     ],
     [
         "4A",
-        "8"
+        "8",
+        "optbranch1"
     ],
     [
         "4A",
@@ -80,8 +82,14 @@ const valuePairs = [
         "6B"
     ],
     [
+        "6A",
+        "8",
+        "optbranch1"
+    ],
+    [
         "4B",
-        "8"
+        "8",
+        "optbranch1"
     ],
     [
         "8",

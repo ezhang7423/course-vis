@@ -1,4 +1,4 @@
-{
+const courses = {
   'MATH 2A. Calculus with Algebra and Trigonometry': {
     units: '5',
     prerequisites: [],
