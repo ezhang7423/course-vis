@@ -53,7 +53,8 @@ function init() {
         $(go.Diagram, "myDiagramDiv",  // must be the ID or reference to div
             {
                 initialAutoScale: go.Diagram.UniformToFill,
-                layout: $(go.LayeredDigraphLayout)
+                layout: $(go.LayeredDigraphLayout),
+                isReadOnly: true,
                 // other Layout properties are set by the layout function, defined below
             });
 
@@ -97,11 +98,9 @@ function nodeDoubleClick(_, obj) {
 }
 
 function generateDigraph() {
-    myDiagram.startTransaction("generateDigraph");
     generateNodes();
     generateLinks();
     layout();
-    myDiagram.commitTransaction("generateDigraph");
 }
 
 // Creates a random number of randomly colored nodes.
