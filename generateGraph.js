@@ -78,16 +78,25 @@ function init() {
             )
         );
 
-
     // define the Link template to be minimal
     myDiagram.linkTemplate =$(go.Link,
         { routing: go.Link.Orthogonal, corner: 10 },
-        $(go.Shape, { strokeWidth: 3, stroke: "#555" }));
+        $(go.Shape, { strokeWidth: 3, stroke: "#555"},
+            new go.Binding("stroke", "color")));
 
     // generate a tree with the default values
     generateDigraph();
 }
 
+function linkColorConverter(_, elt) {
+    let link = elt.part;
+    if (!link) return blue;
+    let f = link.fromNode;
+    if (!f || !f.data || !f.data.critical) return blue;
+    let t = link.toNode;
+    if (!t || !t.data || !t.data.critical) return blue;
+    return pink;
+}
 
 function generateDigraph() {
     myDiagram.startTransaction("generateDigraph");
@@ -99,7 +108,7 @@ function generateDigraph() {
 
 // Creates a random number of randomly colored nodes.
 function generateNodes() {
-    const data = courses
+    const data = courses;
     data.forEach((v)=>{
         v["key"] = v["text"];
     });
@@ -108,10 +117,11 @@ function generateNodes() {
 
 // Create some link data
 function generateLinks() {
-    const pair = valuePairs
+    const pair = valuePairs;
     let result = [];
     pair.forEach((v)=>{
-        result.push({"from": v[0], "to": v[1]});
+        let color = v[2] ? "#FEBC11" : "#003660";
+        result.push({"from": v[0], "to": v[1], "color": color});
     });
     myDiagram.model.linkDataArray = result;
 }
