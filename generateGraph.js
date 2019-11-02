@@ -60,7 +60,7 @@ function init() {
     // define the Node template
     myDiagram.nodeTemplate =
         $(go.Node, "Auto",
-            { locationSpot: go.Spot.Center, resizable: true },
+            { locationSpot: go.Spot.Center, resizable: true, click: nodeDoubleClick },
             $(go.Shape, "RoundedRectangle", {
                 fill: "#004D9F",
                 stroke: "#004D9F"
@@ -88,14 +88,12 @@ function init() {
     generateDigraph();
 }
 
-function linkColorConverter(_, elt) {
-    let link = elt.part;
-    if (!link) return blue;
-    let f = link.fromNode;
-    if (!f || !f.data || !f.data.critical) return blue;
-    let t = link.toNode;
-    if (!t || !t.data || !t.data.critical) return blue;
-    return pink;
+function nodeDoubleClick(_, obj) {
+    let clicked = obj.part;
+    if (clicked !== null) {
+        let currentCourse = clicked.data;
+        alert(currentCourse.text);
+    }
 }
 
 function generateDigraph() {
