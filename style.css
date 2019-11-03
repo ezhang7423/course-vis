@@ -1,0 +1,117 @@
+body{
+    font-family:Avenir,Helvetica,Arial,sans-serif;
+    display: flex;
+    overflow: hidden;
+}
+#myDiagramDiv{
+    border-width: 0!important;
+    outline: none!important;
+    direction: rtl;
+}
+canvas:focus{
+    outline: none;
+}
+.right{
+    width: 50%;
+}
+p{
+    margin: 4px 10px;
+}
+
+.button{
+    border: solid 4px #004D9F;
+    border-radius: 10px;
+    padding: 4px 7px;
+    box-shadow: 4px 4px 2px rgb(0,0,0, 0.2);
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight:500;
+}
+.button:hover{
+    box-shadow: 4px 4px 2px rgb(0,0,0, 0.28);
+}
+
+.course{
+    border: solid 4px #004D9F;
+    border-radius: 10px;
+    height: 60vh;
+    margin: 20px auto;
+    box-shadow: 4px 4px 2px rgb(0,0,0, 0.4);
+    z-index: 2000000;
+
+}
+.header{
+    font-size: 20px;
+    margin: 5px;
+    background: linear-gradient(70deg, #002853 40%, #004D9F 40% 60%);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.short_name{
+    font-size: 13px;
+}
+.info{
+    font-size: 16px;
+    padding: 10px;
+}
+.extra_box{
+    background: linear-gradient(70deg, #002853 40%, #004D9F 40% 60%);
+    padding: 5px;
+    color: #fff;
+    width: 100px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.modal {
+position: fixed;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+opacity: 0;
+visibility: hidden;
+transform: scale(1.1);
+transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+z-index: 20000;
+}
+.show-modal {
+opacity: 1;
+visibility: visible;
+transform: scale(1.0);
+transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: white;
+padding: 1rem 1.5rem;
+width: 24rem;
+border-radius: 0.5rem;
+}
+.c{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.child{
+    display: flex;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    visibility: hidden;
+    justify-content: space-between;
+
+}
+.child > .container{
+    border: solid 4px #004D9F;
+    border-radius: 10px;
+    box-shadow: 4px 4px 2px rgb(0,0,0, 0.4);
+    background-color: #fff;
+}
