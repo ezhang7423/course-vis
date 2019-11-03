@@ -30,7 +30,7 @@
         <a href="#">Other</a>
     </div>
 </body>
-<div id="modal">
+<div class="modal">
     <div class="course modal-content">
         <div class="header">
             <div class="name">
@@ -66,14 +66,13 @@
 
 <script>
     // Get the modal
-    modal = document.getElementById("modal");
+    modal = document.querySelector('.modal')
     child = document.getElementById("child");
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
-            modal.style.opacity = "0";
-            modal.style.visibility = "hidden";
+            modal.classList.toggle("show-modal");
         }
     }
 </script>
@@ -144,33 +143,37 @@
         border-radius: 5px;
         text-align: center;
     }
-    .modal-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: white;
-        width: 80%;
-        border-style: solid;
-        max-height: 80vh;
-        max-width: 800px;
-        overflow: auto;
 
-    }
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    z-index: 20000;
+}
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
 
-    #modal {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        transform: scale(1.1);
-        transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-        visibility: hidden;
-        z-index: 2000000;
-    }
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+}
     .c{
         position: absolute;
         bottom: 0;

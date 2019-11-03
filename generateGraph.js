@@ -131,10 +131,7 @@ function layout() {
 }
 
 function openModal(currentCourse) {
-    modal.style.opacity = "1";
-    modal.style.visibility = "visible";
-    child.style.opacity = "1"
-    child.style.visibility = "visible";
+    modal.classList.toggle("show-modal");
     console.log(getChildCourses(currentCourse.text))
 }
 
