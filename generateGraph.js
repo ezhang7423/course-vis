@@ -89,13 +89,7 @@ function init() {
     generateDigraph();
 }
 
-function nodeDoubleClick(_, obj) {
-    let clicked = obj.part;
-    if (clicked !== null) {
-        let currentCourse = clicked.data;
-        openModal(currentCourse)
-    }
-}
+
 
 function generateDigraph() {
     generateNodes();
@@ -130,9 +124,22 @@ function layout() {
     lay.setsPortSpots = true;
 }
 
+function nodeDoubleClick(_, obj) {
+    let clicked = obj.part;
+    if (clicked !== null) {
+        let currentCourse = clicked.data;
+        openModal(currentCourse)
+    }
+}
+
 function openModal(currentCourse) {
-    modal.classList.toggle("show-modal");
+    //change modal based on which button is clicked
+    toggleModal();
     console.log(getChildCourses(currentCourse.text))
+}
+
+function toggleModal(){
+    modal.classList.toggle("show-modal");
 }
 
 function getCourseDetail(course_key) {
