@@ -61,6 +61,10 @@ function updateModalContent(courseKey) {
             <span class="extra_box button">
             Math 3B
         </span>
+        ${
+            data.text === "4A" ? `<iframe width="100%" src="https://www.youtube.com/embed/F3N5EkMX_ks" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+                : ""
+        }
         </div>`;
     setTimeout(()=>{course.innerHTML = html;}, 300)
 }

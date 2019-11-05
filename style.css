@@ -161,3 +161,6 @@ p{
 .skeleton-short{
     width: 100px;
 }
+iframe{
+    margin: 20px auto;
+}
