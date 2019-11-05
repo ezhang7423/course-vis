@@ -88,30 +88,66 @@ p{
 
 .modal-content {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    padding: 1rem 1.5rem;
     width: 24rem;
     border-radius: 0.5rem;
 }
-.c{
+.childContainer{
     position: absolute;
     bottom: 0;
-    left: 0;
-}
-.child{
-    display: flex;
+    left: 20%;
+    right: 20%;
+    z-index: 2000000;
+    width: 60%;
     transform: scale(1.1);
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-    visibility: hidden;
-    justify-content: space-between;
+}
+.children{
+    display: flex;
+    justify-content: center;
 
 }
-.child > .container{
+.children > .container{
     border: solid 4px #004D9F;
     border-radius: 10px;
     box-shadow: 4px 4px 2px rgb(0,0,0, 0.4);
     background-color: #fff;
+    min-width: 50px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 10px;
+}
+.trans{
+    animation-name: trans;
+    animation-duration: 0.5s;
+}
+
+
+@keyframes trans {
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    0% {
+        opacity: 1;
+    }
+}
+
+.skeleton{
+    background: #eee;
+    color: #eee;
+    height: 20px;
+}
+.skeleton-name{
+    width: 60px;
+    margin-bottom: 5px;
+}
+
+.skeleton-short{
+    width: 100px;
 }
