@@ -1,5 +1,6 @@
 body{
     overflow: hidden;
+    font-family:Avenir,Helvetica,Arial,sans-serif;
 }
 nav{
     display: flex;
@@ -31,7 +32,6 @@ input:focus, textarea:focus {
     outline: none;
 }
 .main{
-    font-family:Avenir,Helvetica,Arial,sans-serif;
     display: flex;
 }
 #myDiagramDiv{
