@@ -1,7 +1,38 @@
 body{
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ucsb{
+    margin-top: 2px;
+}
+input{
+    background-color: transparent;
+    border-width: 0 0 1px 0;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    box-shadow: none;
+    float: none;
+    font-size: 18px;
+    letter-spacing: 0.5pt;
+    padding-bottom: 5px;
+    margin-right: 10px;
+}
+.setting{
+    margin-top: 1px;
+}
+.rightNav{
+    display: flex;
+}
+input:focus, textarea:focus {
+    outline: none;
+}
+.main{
     font-family:Avenir,Helvetica,Arial,sans-serif;
     display: flex;
-    overflow: hidden;
 }
 #myDiagramDiv{
     border-width: 0!important;
