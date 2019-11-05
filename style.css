@@ -21,6 +21,7 @@ input{
     letter-spacing: 0.5pt;
     padding-bottom: 5px;
     margin-right: 10px;
+    width: 400px;
 }
 .setting{
     margin-top: 1px;
@@ -194,4 +195,12 @@ p{
 }
 iframe{
     margin: 20px auto;
+}
+.textonly{
+    border: none !important;
+    font-size: 16px !important;
+    font-weight: 600;
+    padding: 0 !important;
+    text-decoration: none;
+    color: #336dcd;
 }

@@ -19,6 +19,15 @@ function nodeDoubleClick(_, obj) {
     }
 }
 
+function getLongDescription(course_key) {
+    for (let i in x){
+        if (i.includes("MATH " + course_key)){
+            return x[i].description
+        }
+    }
+    return ""
+}
+
 function updateModalContent(courseKey) {
     let data = getCourseDetail(courseKey);
     let course = document.querySelector(".course")
@@ -46,21 +55,11 @@ function updateModalContent(courseKey) {
     html = `<div class="header">
             <div class="name">
                 Math ${data.text}
-                <br>
-                <div class="short_name">LIN ALG W/ APP</div>
             </div>
             <span class="unit">Unit: 4.0</span>
         </div>
         <div class="info">
-            ${data.description}
-            <br><br>
-            <span class="extra_box button">
-            Math 3A
-        </span>
-            &nbsp;
-            <span class="extra_box button">
-            Math 3B
-        </span>
+            <strong>Course Description:</strong> ${getLongDescription(data.text)}
         ${
             data.text === "4A" ? `<iframe width="100%" src="https://www.youtube.com/embed/F3N5EkMX_ks" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
                 : ""
