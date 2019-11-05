@@ -88,7 +88,7 @@ p{
 
 .modal-content {
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
@@ -105,12 +105,22 @@ p{
     transform: scale(1.1);
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
-.children{
+
+.parentContainer{
+    position: absolute;
+    top: 0;
+    left: 20%;
+    right: 20%;
+    z-index: 2000000;
+    width: 60%;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.children, .parents {
     display: flex;
     justify-content: center;
-
 }
-.children > .container{
+.container{
     border: solid 4px #004D9F;
     border-radius: 10px;
     box-shadow: 4px 4px 2px rgb(0,0,0, 0.4);
