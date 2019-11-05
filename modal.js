@@ -35,25 +35,6 @@ function updateModalContent(courseKey) {
     let html;
     html = `<div class="header">
             <div class="name">
-                <div class="skeleton skeleton-name"></div>
-                <div class="short_name skeleton skeleton-short">LIN ALG W/ APP</div>
-            </div>
-            <span class="unit">Unit: 4.0</span>
-        </div>
-        <div class="info">
-            ${data.description}
-            <br><br>
-            <span class="extra_box button">
-            Math 3A
-        </span>
-            &nbsp;
-            <span class="extra_box button">
-            Math 3B
-        </span>
-        </div>`;
-    course.innerHTML = html;
-    html = `<div class="header">
-            <div class="name">
                 Math ${data.text}
             </div>
             <span class="unit">Unit: 4.0</span>
@@ -65,7 +46,7 @@ function updateModalContent(courseKey) {
                 : ""
         }
         </div>`;
-    setTimeout(()=>{course.innerHTML = html;}, 300)
+    course.innerHTML = html;
 }
 
 function openModal(currentCourse) {
