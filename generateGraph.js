@@ -135,10 +135,10 @@ function getCourseDetail(course_key) {
 }
 
 function getChildCourses(course_key) {
-    let result = {};
+    let result = [];
     valuePairs.forEach((v)=>{
         if (v[0] === course_key){
-            result[v[1]] = getCourseDetail(v[1])
+            result.push(getCourseDetail(v[1]))
         }
     });
     return result;
