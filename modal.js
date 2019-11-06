@@ -1,6 +1,7 @@
    // Get the modal
    modal = document.querySelector('.modal');
    child = document.querySelector(".children");
+   parents = document.querySelector(".parents");
 
    // When the user clicks anywhere outside of the modal, close it
    window.onclick = function(event) {
@@ -18,6 +19,15 @@ function nodeDoubleClick(_, obj) {
     }
 }
 
+function getLongDescription(course_key) {
+    for (let i in x){
+        if (i.includes("MATH " + course_key)){
+            return x[i].description
+        }
+    }
+    return ""
+}
+
 function updateModalContent(courseKey) {
     let data = getCourseDetail(courseKey);
     let course = document.querySelector(".course")
@@ -25,54 +35,30 @@ function updateModalContent(courseKey) {
     let html;
     html = `<div class="header">
             <div class="name">
-                <div class="skeleton skeleton-name"></div>
-                <div class="short_name skeleton skeleton-short">LIN ALG W/ APP</div>
+                Math ${data.text}
             </div>
             <span class="unit">Unit: 4.0</span>
         </div>
         <div class="info">
-            ${data.description}
-            <br><br>
-            <span class="extra_box button">
-            Math 3A
-        </span>
-            &nbsp;
-            <span class="extra_box button">
-            Math 3B
-        </span>
+            <strong>Course Description:</strong> ${getLongDescription(data.text)}
+        ${
+            data.text === "4A" ? `<iframe width="100%" src="https://www.youtube.com/embed/F3N5EkMX_ks" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+                : ""
+        }
         </div>`;
     course.innerHTML = html;
-    html = `<div class="header">
-            <div class="name">
-                Math ${data.text}
-                <br>
-                <div class="short_name">LIN ALG W/ APP</div>
-            </div>
-            <span class="unit">Unit: 4.0</span>
-        </div>
-        <div class="info">
-            ${data.description}
-            <br><br>
-            <span class="extra_box button">
-            Math 3A
-        </span>
-            &nbsp;
-            <span class="extra_box button">
-            Math 3B
-        </span>
-        </div>`;
-    setTimeout(()=>{course.innerHTML = html;}, 300)
 }
 
 function openModal(currentCourse) {
     //change modal based on which button is clicked
-    toggleModal(getChildCourses(currentCourse.text));
+    toggleModal(
+        getChildCourses(currentCourse.text),
+        getParentCourses(currentCourse.text)
+    );
     updateModalContent(currentCourse.text)
 }
-function toggleModal(courseContent){
-    modal.classList.toggle("show-modal");
-    child.classList.toggle("show-modal");
 
+function renderBottom(courseContent) {
     if (!courseContent){
         child.innerHTML = "";
         return
@@ -88,21 +74,41 @@ function toggleModal(courseContent){
     child.innerHTML = html
 }
 
+function renderTop(courseContent) {
+    if (!courseContent){
+        parents.innerHTML = "";
+        return
+    }
+    let html = "";
+    courseContent.forEach((v)=>{
+        console.log(v);
+        html += `
+        <div class="container" onclick="goNewCourse('${v.text}')" id="${v.text + '_course'}">
+            ${v.text}
+        </div>`
+    });
+    parents.innerHTML = html
+}
+
+function toggleModal(bottomCourseContent, topCourseContent){
+    modal.classList.toggle("show-modal");
+    child.classList.toggle("show-modal")
+    parents.classList.toggle("show-modal");
+    renderBottom(bottomCourseContent);
+    renderTop(topCourseContent)
+}
+
 function goNewCourse(courseKey) {
     setTimeout(()=>{
-        let html = "";
-        getChildCourses(courseKey).forEach((v)=>{
-            html += `
-                <div class="container" onclick="goNewCourse('${v.text}')" id="${v.text + '_course'}">
-                    ${v.text}
-                </div>`
-        });
+        renderBottom(getChildCourses(courseKey));
+        renderTop(getParentCourses(courseKey));
         updateModalContent(courseKey);
-        child.innerHTML = html;
     }, 250);
     setTimeout(()=>{
         document.querySelector(".childContainer").classList.toggle("trans");
+        document.querySelector(".parentContainer").classList.toggle("trans");
     }, 500);
     document.querySelector(".childContainer").classList.toggle("trans");
+    document.querySelector(".parentContainer").classList.toggle("trans");
 
 }

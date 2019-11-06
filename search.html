@@ -1,21 +1,28 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>UCSB General Catalog</title>
-    <meta name="description" content="Interactive demonstration of hierarchical layout features by the LayeredDigraphLayout class." />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://gojs.net/latest/release/go.js"></script>
-    <script src="data/mathMajor.js"></script>
-    <script src="data/allMathCourses.js"></script>
-    <script src="generateGraph.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    </head>
+    <style>
+        .search{
+            display: flex;
+            margin: 40vh 0;
+            justify-content: center;
+            align-items: center;
+        }
+        .searche{
+            width: 80vw;
+            font-size: 72px;
+        }
+    </style>
+</head>
 
-<nav>
-    <svg class="ucsb" width="338px" height="24px" viewBox="0 0 338 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+<body>
+        <svg class="ucsb" width="338px" height="24px" viewBox="0 0 338 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
         <title>Logo/Navy/UC Santa Barbara@1x</title>
         <desc>Created with Sketch.</desc>
         <defs>
@@ -33,50 +40,26 @@
             </g>
         </g>
     </svg>
-    <div class="rightNav">
-        <button class="explore">Explore</button>
-        <input placeholder="Majors, departments, courses..." />
-        <div class="setting">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-        </div>
+    <div class = "search">
+    <input class ="searche" placeholder="Majors, departments, courses..." />
     </div>
-</nav>
-<body onload="init()">
-    <div class="main">
-        <div id="myDiagramDiv" style="border: solid 1px black; background: white; width: 100%; height: 100vh"></div>
-        <div class="right">
-            <h2>Pre-major Requirements</h2>
-            <div>
-                <p>Computer Science 8, 16 or Engineering 3 </p>
-                <p>Physics 1, 6A, or 21 </p>
-            </div>
-            <h2>Upper Division Requirements</h2>
-            <div>
-                <p>Math 108A-B, 111A-B, 117, 118A-B, 122A </p>
-                <p>Math 111C or 118C </p>
-                <p>Math 145 or 147A </p>
-            </div>
-            <br>
-            <a class="textonly" href="#">Major Info PDF</a>
-        </div>
-    </div>
+
+<script>
+    let inputEle = document.querySelector(".searche");
+
+    inputEle.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            let userInput = inputEle.value;
+            if (userInput.includes("major") || userInput.includes("Major")){
+                window.location.href = "main.html"
+            } else{
+                window.location.href = "dept.html"
+            }
+        }
+    });
+
+</script>
 
 </body>
-<div class="modal">
-    <div class="course modal-content">
-
-    </div>
-</div>
-
-<div class="parentContainer">
-    <div class="parents">
-
-    </div>
-</div>
-<div class="childContainer">
-    <div class="children">
-
-    </div>
-</div>
-    <script src="modal.js"></script>
 </html>
