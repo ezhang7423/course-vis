@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@1.0.1/dist/conversational-form.min.js" crossorigin></script>
+    <style>
+    /* .spacer{
+        margin: 500px 500px;
+    } */
+    </style>
+</head>
+<body>
+    <div class = "spacer"></div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <form id="my-form-element" theme="red" cf-form>
+            <input type="text" cf-questions="This tool will help explore new courses at UCSB. What's your name?" />
+            <fieldset cf-questions="Hi {previous-answer}! Are you interested in climbing?">
+                    <input type="radio" name="cfc-intro" id="intro-yes" value="yes">
+                    <label for="intro-yes">Yes</label>
+                
+                    <input type="radio" name="cfc-intro" id="intro-no" value="no">
+                    <label for="intro-no">No</label>
+
+                </fieldset>
+                <input
+                    type="text"
+                    cf-questions="I would love to suggest the Gaucho Recreation program! You can sign up here: https://register.recreation.ucsb.edu/Program/GetProgramDetails?courseId=8fc56b21-dfee-4dab-a40e-a3d8d5f77ce8&semesterId=122c74ed-f7c1-4121-a22e-3f7661398f0e "
+                    cf-conditional-cfc-intro="yes" />
+                    <!-- <input
+                    type="text"
+                    cf-questions="That's too bad. Would you be interested in learning about the human mind?"
+                    cf-conditional-cfc-intro="no"  /> -->
+                    <fieldset cf-conditional-cfc-intro="no" cf-questions="That's too bad. Would you be interested in learning about the human mind?">
+                            <input type="radio" name="cfc-itro" id="itro-yes" value="yes">
+                            <label for="itro-yes">Yes</label>
+                        
+                            <input type="radio" name="cfc-itro" id="itro-no" value="no">
+                            <label for="itro-no">No</label>
+                            
+                        </fieldset>
+                        <input
+                        type="text"
+                        cf-questions="That's great to hear. Why not sign up for a psychology class at https://my.sa.ucsb.edu/catalog/Current/CollegesDepartments/ls-intro/psych.aspx?DeptTab=Courses"
+                        cf-conditional-cfc-itro="yes" />
+                        <input
+                    type="text"
+                    cf-questions="Hmm. Let me find something else UCSB can offer you."
+                    cf-conditional-cfc-itro="no" />
+                    <!-- <fieldset cf-conditional-intro="intro-no" cf-questions="Second question">
+                        <input type="radio" name="cfc-intro" id="intro-yes" value="yes">
+                        <label for="intro-yes">Yes</label>
+                    
+                        <input type="radio" name="cfc-intro" id="intro-no" value="no">
+                        <label for="intro-no">No</label>
+                    </fieldset> -->
+    </form>
+</body>
+</html>
