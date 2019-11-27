@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .begin.show-button{
+            opacity: 1;
+            transition: all 1s;
+        }
+        .begin{
+            border: 1px solid black;
+            background-color: white;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-family: sans-serif;
+            opacity: 0;
+        }
+        .begin:hover{
+            border: 1px solid black;
+            background-color: lightgray;
+            transition: all .5s;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-family: sans-serif;
+        }
+        .blend {
+        mix-blend-mode: multiply;
+        }
+        .isolate {
+        isolation: isolate;
+        }
+        .page-wraper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+</head>
+<body>
+    <div class = "page-wraper">
+    <svg class="svg" width="40%" height="40%" viewBox="0 0 700 700">
+       
+        <g class="isolate">
+          <path class="blend c1"
+          style="opacity:1;fill:#003660;fill-opacity:1;fill-rule:evenodd;stroke:#003660;stroke-width:79.81949615;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+          d="m 215.47816,252.84847 115.22634,0" />
+          <path class="blend c2"
+          d="m 215.09133,252.65768 0,115.22634"
+          style="display:inline;opacity:1;fill:#003660;fill-opacity:1;fill-rule:evenodd;stroke:#FEBC11;stroke-width:79.81949615;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1" />
+          <path class="blend c3"
+          style="opacity:1;fill:#003660;fill-opacity:1;fill-rule:evenodd;stroke:#003660;stroke-width:79.81949615;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+          d="m 215.47816,367.84847 115.22634,0" />
+          <path class="blend o1"
+          style="display:inline;opacity:1;fill:#09847A;fill-opacity:1;fill-rule:evenodd;stroke:#09847A;stroke-width:79.81949615;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+          d="m 410.71374,252.65768 0,115.22634" />
+          <path class="blend o2"
+          d="m 410.47816,368.44844 115.22634,0"
+          style="opacity:1;fill:#003660;fill-opacity:1;fill-rule:evenodd;stroke:#FEBC11;stroke-width:79.81949615;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1" />
+          <path class="blend o4"
+          d="m 410.47816,253 115.22634,0"
+          style="opacity:1;fill:#003660;fill-opacity:1;fill-rule:evenodd;stroke:#FEBC11;stroke-width:79.81949615;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1" />
+          <!-- <path class="blend u1"
+          d="m 210.47816,448.64847 115.22634,0"
+          style="opacity:1;fill:#003660;fill-opacity:1;fill-rule:evenodd;stroke:#003660;stroke-width:80;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1" />
+           -->
+          <path class="blend u2"
+          style="opacity:1;fill:#003660;fill-opacity:1;fill-rule:evenodd;stroke:#003660;stroke-width:80;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+          d="m 210.47816,563.85818 115.22634,0" />
+          <path class="blend u3"
+          style="display:inline;opacity:1;fill:#003660;fill-opacity:1;fill-rule:evenodd;stroke:#FEBC11;stroke-width:80;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+          d="m 210.09133,448.56614 0,115.22634" />
+          <path class="blend u4"
+          style="display:inline;opacity:1;fill:#003660;fill-opacity:1;fill-rule:evenodd;stroke:#FEBC11;stroke-width:80;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+          d="m 326.09133,448.56614 0,115.22634" />
+          <path class="blend r1"
+          d="m 410.71374,448.36614 0,115.22634"
+          style="display:inline;opacity:1;fill:#09847A;fill-opacity:1;fill-rule:evenodd;stroke:#da3931;stroke-width:80;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1" />
+          <path class="blend r2"
+          style="opacity:1;fill:#003660;fill-opacity:1;fill-rule:evenodd;stroke:#003660;stroke-width:80;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+          d="m 410.47816,449.85818 115.22634,0" />
+          <path class="blend r3"
+          style="display:inline;opacity:1;fill:#09847A;fill-opacity:1;fill-rule:evenodd;stroke:#da3931;stroke-width:80;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+          d="m 526.004,448.36614 0,115.22634" />
+          <path class="r4"
+          style="fill:none;fill-rule:evenodd;stroke:#FEBC11;stroke-width:80;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+            d="m 488.924,529.49118 36.75863,35.10532"/>
+          <path class="blend s1"
+          style="display:inline;opacity:1;fill:#09847A;fill-opacity:1;fill-rule:evenodd;stroke:#da3931;stroke-width:80;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+          d="m 215.32637,644.48746 115.22634, 0" />
+          <path class="blend s2"
+          d="m 215.31263,759.5965 115.37, 0"
+          style="fill:none;fill-rule:evenodd;stroke:#09847A;stroke-width:80;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1" />
+          <path class="blend s3"
+        style="fill:none;fill-rule:evenodd;stroke:#FEBC11;stroke-width:80;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+        d="m 215.924,643.49118 114.75863,115.10532"/>
+        <path class="blend e1"
+        style="opacity:1;fill:#003660;fill-opacity:1;fill-rule:evenodd;stroke:#003660;stroke-width:79.81949615;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+        d="m 410.71374, 643.49118  115.22634,0" />
+        <path class="blend e2"
+        d="m 410.71374, 643.49118  0,115.22634"
+        style="display:inline;opacity:1;fill:#003660;fill-opacity:1;fill-rule:evenodd;stroke:#0b9444;stroke-width:79.81949615;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1" />
+        <path class="blend e3"
+        style="opacity:1;fill:#003660;fill-opacity:1;fill-rule:evenodd;stroke:#003660;stroke-width:79.81949615;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+        d="m 410.71374, 758.49118  115.22634,0" />
+        <path class="blend s11"
+        style="display:inline;opacity:1;fill:#FEBC11;fill-opacity:1;fill-rule:evenodd;stroke:#da3931;stroke-width:80;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+        d="m 606.32637,644.48746 115.22634, 0" />
+        <path class="blend s12"
+        d="m 606.31263,759.5965 115.37, 0"
+        style="fill:none;fill-rule:evenodd;stroke:#09847A;stroke-width:80;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1" />
+        <path class="blend s13"
+      style="fill:none;fill-rule:evenodd;stroke:#FEBC11;stroke-width:80;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+      d="m 606.924,643.49118 114.75863,115.10532"/>
+        </g>
+        <path class="o3"
+        d="m 526,252.65768 0,115.22634"
+        style="display:inline;opacity:1;fill:#09847A;fill-opacity:1;fill-rule:evenodd;stroke:#09847A;stroke-width:79.81949615;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1" />
+        </svg>
+        <button class = "begin">BEGIN</button>
+    </div>
+
+      <script>
+      var timeline = anime.timeline({ autoplay: true, direction: 'forward', loop: false });
+
+function setDash(el) {
+  if (el.nodeName === 'path') {
+    el.style.dashArray = anime.setDashoffset(el);
+    return [anime.setDashoffset(el) - 1, 0];
+  }
+  
+  return 0;
+}
+
+var animations = [
+  //row 1
+  { name: '.c1', x: 200.47816, y: 152.84847, stroke: '#003660' },
+  { name: '.c2', x: 96.09133, y: 152.65768, stroke: '#FEBC11' },
+  { name: '.c3', x: 300.69133, y: 267.65768, stroke: '#003660' },
+  { name: '.o1', x: 387.71374, y: 152.65768, stroke: '#09847A' },
+  //row 2
+  { name: '.o2', x: 397.47816, y: 267.44844, stroke: '#FEBC11' },
+  { name: '.o3', x: 406.41374, y: 152.65768, stroke: '#09847A' },
+  { name: '.o4', x: 494, y: 152.36218, stroke: '#FEBC11' },
+  { name: '.e1', x: 385.47816, y: 246.64847, stroke: '#003660' },
+  //row 3
+  { name: '.u2', x: 198.47816, y: 463.85818, stroke: '#003660' },
+  { name: '.u3', x: 193.09133, y: 348.56614, stroke: '#FEBC11' },
+  { name: '.u4', x: 308, y: 348.36218, stroke: '#FEBC11' },
+  { name: '.r1', x: 387.71374, y: 348.36614, stroke: '#da3931' },
+  //row 4
+  { name: '.r2', x: 399.004, y: 348.36614, stroke: '#047C91' },
+  { name: '.r3', x: 405.7, y: 348.46218, stroke: '#047C91' },
+  { name: '.r4', x: 365.70001, y: 428.66217, stroke: '#FEBC11' },
+  { name: '.n5', x: 503, y: 463.16217, fill: '#047C91' },
+  //row 5
+  { name: '.s1', x: 198.32637, y: 544.48746, stroke: '#da3931' },
+  { name: '.s2', x: 200.31263, y: 659.5965, stroke: '#da3931' },
+  { name: '.e2', x: 287.1264, y: 844.39655, stroke: '#09847A' },
+  { name: '.s3', x: 297.924, y: 545.49118, stroke: '#003660' },
+  { name: '.e3', x: 295.31264, y: 855.39655, stroke: '#da3931' },
+  //column 5
+  { name: '.s11', x: 278.32637, y: 642.48746, stroke: '#003660' },
+  { name: '.s12', x: 378.32637, y: 860.48746, stroke: '#003660' },
+  { name: '.s13', x: 478.32637, y: 845.48746, stroke: '#FEBC11' },
+  
+];
+displayButton = () =>  document.querySelector('.begin').classList.toggle('show-button')
+function delay(){
+animations.forEach(function(animation, index) {
+  if (animation.stroke) {
+    timeline
+    .add({
+      targets: animation.name,
+      stroke: {
+        value: ['#000', animation.stroke],
+        duration: 500,
+        delay: 10000 + index * 30,
+        easing: 'easeInOutQuad'
+      },
+      offset: 0
+    });
+  }
+  if (animation.fill) {
+    timeline
+    .add({
+      targets: animation.name,
+      fill: {
+        value: ['#000', animation.fill],
+        duration: 500,
+        delay: 10000 + index * 30,
+        easing: 'easeInOutQuad'
+      },
+      offset: 0
+    });
+  }
+  timeline
+  .add({
+    targets: animation.name,
+    translateX: {
+      value: [100 * (index % 4) - animation.x + 100, -100],
+      duration: 500,
+      delay: 10000 + index * 30,
+      easing: 'easeInOutQuad'
+    },
+    translateY: {
+      value: [100 * Math.floor(index / 4) - animation.y + 100, -100],
+      duration: 500,
+      delay: 10000 + index * 30,
+      easing: 'easeInOutQuad'
+    },
+    offset: 0
+  });
+  timeline
+  .add({
+    targets: animation.name,
+    strokeDashoffset: {
+      value: setDash,
+      duration: 800,
+      delay: 12000 + index * 30,
+      easing: 'easeInOutQuad'
+    },
+    offset: 0
+  });
+});
+
+timeline
+.add({
+  targets: '.t1',
+  opacity: 1,
+  duration: 1000,
+  delay: 40000,
+  offset: 0
+});
+}
+function regular(){
+animations.forEach(function(animation, index) {
+  if (animation.stroke) {
+    timeline
+    .add({
+      targets: animation.name,
+      stroke: {
+        value: ['#000', animation.stroke],
+        duration: 500,
+        delay: 1000 + index * 30,
+        easing: 'easeInOutQuad'
+      },
+      offset: 0
+    });
+  }
+  if (animation.fill) {
+    timeline
+    .add({
+      targets: animation.name,
+      fill: {
+        value: ['#000', animation.fill],
+        duration: 500,
+        delay: 1000 + index * 30,
+        easing: 'easeInOutQuad'
+      },
+      offset: 0
+    });
+  }
+  timeline
+  .add({
+    targets: animation.name,
+    translateX: {
+      value: [100 * (index % 4) - animation.x + 100, -100],
+      duration: 500,
+      delay: 1000 + index * 30,
+      easing: 'easeInOutQuad'
+    },
+    translateY: {
+      value: [100 * Math.floor(index / 4) - animation.y + 100, -100],
+      duration: 500,
+      delay: 1000 + index * 30,
+      easing: 'easeInOutQuad'
+    },
+    offset: 0
+  });
+  timeline
+  .add({
+    targets: animation.name,
+    strokeDashoffset: {
+      value: setDash,
+      duration: 800,
+      delay: 1200 + index * 30,
+      easing: 'easeInOutQuad'
+    },
+    offset: 0
+  });
+});
+
+setTimeout(displayButton, 3000);
+   
+}regular();
+// delay();
+</script>
+</body>
+</html>

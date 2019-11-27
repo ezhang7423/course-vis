@@ -49,6 +49,7 @@ const courses = [
         "description": "Abstract Algebra"
     }
 ]
+
 const valuePairs = [
     [
         "2A",

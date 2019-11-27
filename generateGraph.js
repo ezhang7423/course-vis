@@ -143,13 +143,3 @@ function getChildCourses(course_key) {
     });
     return result;
 }
-
-function getParentCourses(course_key) {
-    let result = [];
-    valuePairs.forEach((v)=>{
-        if (v[1] === course_key){
-            result.push(getCourseDetail(v[0]))
-        }
-    });
-    return result;
-}

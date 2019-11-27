@@ -1,39 +1,7 @@
 body{
-    overflow: hidden;
     font-family:Avenir,Helvetica,Arial,sans-serif;
-}
-nav{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.ucsb{
-    margin-top: 2px;
-}
-input{
-    background-color: transparent;
-    border-width: 0 0 1px 0;
-    border-bottom: 1px solid #ccc;
-    border-radius: 0;
-    box-shadow: none;
-    float: none;
-    font-size: 18px;
-    letter-spacing: 0.5pt;
-    padding-bottom: 5px;
-    margin-right: 10px;
-    width: 400px;
-}
-.setting{
-    margin-top: 1px;
-}
-.rightNav{
-    display: flex;
-}
-input:focus, textarea:focus {
-    outline: none;
-}
-.main{
-    display: flex;
+    overflow: hidden;
 }
 #myDiagramDiv{
     border-width: 0!important;
@@ -120,7 +88,7 @@ p{
 
 .modal-content {
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
@@ -137,22 +105,12 @@ p{
     transform: scale(1.1);
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
-
-.parentContainer{
-    position: absolute;
-    top: 0;
-    left: 20%;
-    right: 20%;
-    z-index: 2000000;
-    width: 60%;
-    transform: scale(1.1);
-    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-}
-.children, .parents {
+.children{
     display: flex;
     justify-content: center;
+
 }
-.container{
+.children > .container{
     border: solid 4px #004D9F;
     border-radius: 10px;
     box-shadow: 4px 4px 2px rgb(0,0,0, 0.4);
@@ -192,36 +150,4 @@ p{
 
 .skeleton-short{
     width: 100px;
-}
-iframe{
-    margin: 20px auto;
-}
-.textonly{
-    border: none !important;
-    font-size: 16px !important;
-    font-weight: 600;
-    padding: 0 !important;
-    text-decoration: none;
-    color: #336dcd;
-}
-
-.explore{
-    margin-right: 10px;
-}
-button{
-    border: 1px solid black;
-    background-color: white;
-    color: black;
-    padding: 5px 7px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 15px;
-    font-family: sans-serif;
-    border-radius: 5px;
-}
-button:hover{
-    background-color: #004D9F;
-    transition: all .2s;
-    color: #fff;
 }
