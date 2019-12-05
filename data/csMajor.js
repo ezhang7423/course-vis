@@ -140,103 +140,103 @@ const courses = [
         "description": "fill l8r"
     },
     {
-        "test": "MATH3A",
+        "text": "MATH3A",
         "description": "fill l8r"
     },
     {
-        "test": "MATH3B",
+        "text": "MATH3B",
         "description": "fill l8r"
     },
     {
-        "test": "MATH4A",
+        "text": "MATH4A",
         "description": "fill l8r"
     },
     {
-        "test": "MATH4B",
+        "text": "MATH4B",
         "description": "fill l8r"
     },
     {
-        "test": "MATH6A",
+        "text": "MATH6A",
         "description": "fill l8r"
     },
     {
-        "test": "PSTAT120A",
+        "text": "PSTAT120A",
         "description": "fill l8r"
     },
     {
-        "test": "PSTAT120B",
+        "text": "PSTAT120B",
         "description": "fill l8r"
     },
     {
-        "test": "ECE130A",
+        "text": "ECE130A",
         "description": "fill l8r"
     },
     {
-        "test": "ECE130B",
+        "text": "ECE130B",
         "description": "fill l8r"
     },
     {
-        "test": "ECE130C",
+        "text": "ECE130C",
         "description": "fill l8r"
     },
     {
-        "test": "ECE152A",
+        "text": "ECE152A",
         "description": "fill l8r"
     },
     {
-        "test": "MATH119B",
+        "text": "MATH119B",
         "description": "fill l8r"
     },
     {
-        "test": "ECE160",
+        "text": "ECE160",
         "description": "fill l8r"
     },
     {
-        "test": "ECE178",
+        "text": "ECE178",
         "description": "fill l8r"
     },
     {
-        "test": "MATH108A",
+        "text": "MATH108A",
         "description": "fill l8r"
     },
     {
-        "test": "MATH108B",
+        "text": "MATH108B",
         "description": "fill l8r"
     },
     {
-        "test": "MATH119A",
+        "text": "MATH119A",
         "description": "fill l8r"
     },
     {
-        "test": "MATH119B",
+        "text": "MATH119B",
         "description": "fill l8r"
     },
     {
-        "test": "MATH124A",
+        "text": "MATH124A",
         "description": "fill l8r"
     },
     {
-        "test": "MATH124B",
+        "text": "MATH124B",
         "description": "fill l8r"
     },
     {
-        "test": "PSTAT122",
+        "text": "PSTAT122",
         "description": "fill l8r"
     },
     {
-        "test": "PSTAT130",
+        "text": "PSTAT130",
         "description": "fill l8r"
     },
     {
-        "test": "PSTAT160A",
+        "text": "PSTAT160A",
         "description": "fill l8r"
     },
     {
-        "test": "PSTAT160B",
+        "text": "PSTAT160B",
         "description": "fill l8r"
     },
     {
-        "test": "ENGR101",
+        "text": "ENGR101",
         "description": "fill l8r"
     },
 ]
