@@ -51,6 +51,9 @@
         if (event.keyCode === 13) {
             event.preventDefault();
             let userInput = inputEle.value;
+            if (userInput.includes("cs")){
+                window.location.href = "cs.html"
+            }
             if (userInput.includes("major") || userInput.includes("Major")){
                 window.location.href = "main.html"
             } else{
