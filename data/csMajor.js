@@ -1,285 +1,425 @@
 const courses = [
     {
-        "text": "8",
+        "text": "CS8",
         "description": "Introduction to Computer Science"
     },
     {
-        "text": "16",
+        "text": "CS16",
         "description": "fill l8r"
     },
     {
-        "text": "24",
+        "text": "CS24",
         "description": "fill l8r"
     },
     {
-        "text": "32",
+        "text": "CS32",
         "description": "fill l8r"
     },
     {
-        "text": "40",
+        "text": "CS40",
         "description": "fill l8r"
     },
     {
-        "text": "48",
+        "text": "CS48",
         "description": "fill l8r"
     },
     {
-        "text": "48",
+        "text": "CS48",
         "description": "fill l8r"
     },
     {
-        "text": "56",
+        "text": "CS56",
         "description": "fill l8r"
     },
     {
-        "text": "64",
+        "text": "CS64",
         "description": "fill l8r"
     },
     {
-        "text": "111",
+        "text": "CS111",
         "description": "fill l8r"
     },
     {
-        "text": "140",
+        "text": "CS140",
         "description": "fill l8r"
     },
     {
-        "text": "130A",
+        "text": "CS130A",
         "description": "fill l8r"
     },
     {
-        "text": "130B",
+        "text": "CS130B",
         "description": "fill l8r"
     },
     {
-        "text": "138",
+        "text": "CS138",
         "description": "fill l8r"
     },
     {
-        "text": "154",
+        "text": "CS154",
         "description": "fill l8r"
     },
     {
-        "text": "160",
+        "text": "CS160",
         "description": "fill l8r"
     },
     {
-        "text": "162",
+        "text": "CS162",
         "description": "fill l8r"
     },
     {
-        "text": "170",
+        "text": "CS170",
         "description": "fill l8r"
     },
     {
-        "text": "171",
+        "text": "CS171",
         "description": "fill l8r"
     },
     {
-        "text": "174A",
+        "text": "CS174A",
         "description": "fill l8r"
     },
     {
-        "text": "174B",
+        "text": "CS174B",
         "description": "fill l8r"
     },
     {
-        "text": "176A",
+        "text": "CS176A",
         "description": "fill l8r"
     },
     {
-        "text": "176B",
+        "text": "CS176B",
         "description": "fill l8r"
     },
     {
-        "text": "176C",
+        "text": "CS176C",
         "description": "fill l8r"
     },
     {
-        "text": "177",
+        "text": "CS177",
         "description": "fill l8r"
     },
     {
-        "text": "178",
+        "text": "CS178",
         "description": "fill l8r"
     },
     {
-        "text": "180",
+        "text": "CS180",
         "description": "fill l8r"
     },
     {
-        "text": "184",
+        "text": "CS184",
         "description": "fill l8r"
     },
     {
-        "text": "185",
+        "text": "CS185",
         "description": "fill l8r"
     },
     {
-        "text": "189A",
+        "text": "CS189A",
         "description": "fill l8r"
     },
     {
-        "text": "189B",
+        "text": "CS189B",
         "description": "fill l8r"
     },
     {
-        "text": "190AA-ZZ",
+        "text": "CS190AA-ZZ",
         "description": "fill l8r"
     },
     {
-        "text": "192",
+        "text": "CS192",
         "description": "fill l8r"
     },
     {
-        "text": "196",
+        "text": "CS196",
         "description": "fill l8r"
     },
     {
-        "text": "196B",
+        "text": "CS196B",
         "description": "fill l8r"
-    }
+    },
+    {
+        "test": "MATH3A",
+        "description": "fill l8r"
+    },
+    {
+        "test": "MATH3B",
+        "description": "fill l8r"
+    },
+    {
+        "test": "MATH4A",
+        "description": "fill l8r"
+    },
+    {
+        "test": "MATH4B",
+        "description": "fill l8r"
+    },
+    {
+        "test": "MATH6A",
+        "description": "fill l8r"
+    },
+    {
+        "test": "PSTAT120A",
+        "description": "fill l8r"
+    },
+    {
+        "test": "PSTAT120B",
+        "description": "fill l8r"
+    },
+    {
+        "test": "ECE130A",
+        "description": "fill l8r"
+    },
+    {
+        "test": "ECE130B",
+        "description": "fill l8r"
+    },
+    {
+        "test": "ECE130C",
+        "description": "fill l8r"
+    },
+    {
+        "test": "ECE152A",
+        "description": "fill l8r"
+    },
+    {
+        "test": "MATH119B",
+        "description": "fill l8r"
+    },
+    {
+        "test": "ECE160",
+        "description": "fill l8r"
+    },
+    {
+        "test": "ECE178",
+        "description": "fill l8r"
+    },
+    {
+        "test": "MATH108A",
+        "description": "fill l8r"
+    },
+    {
+        "test": "MATH108B",
+        "description": "fill l8r"
+    },
+    {
+        "test": "MATH119A",
+        "description": "fill l8r"
+    },
+    {
+        "test": "MATH119B",
+        "description": "fill l8r"
+    },
+    {
+        "test": "MATH124A",
+        "description": "fill l8r"
+    },
+    {
+        "test": "MATH124B",
+        "description": "fill l8r"
+    },
+    {
+        "test": "PSTAT122",
+        "description": "fill l8r"
+    },
+    {
+        "test": "PSTAT130",
+        "description": "fill l8r"
+    },
+    {
+        "test": "PSTAT160A",
+        "description": "fill l8r"
+    },
+    {
+        "test": "PSTAT160B",
+        "description": "fill l8r"
+    },
+    {
+        "test": "ENGR101",
+        "description": "fill l8r"
+    },
 ]
 
 const valuePairs = [
     [
-        "16",
-        "24"
+        "CS16",
+        "CS24"
     ],
     [
-        "24",
-        "32"
+        "MATH3A",
+        "CS16"
     ],
     [
-        "32",
-        "130A"
+        "MATH3B",
+        "CS24"
     ],
     [
-        "16",
-        "40"
+        "MATH4A",
+        "CS40"
     ],
     [
-        "40",
-        "130A"
+        "MATH4A",
+        "CS64"
     ],
     [
-        "32",
-        "48"
+        "MATH6A",
+        "CS111"
     ],
     [
-        "32",
-        "56"
+        "PSTAT120A",
+        "CS130A"
     ],
     [
-        "16",
-        "64"
-    ],
-    [
-        "24",
-        "111"
-    ],
-    [
-        "130A",
-        "130B"
-    ],
-    [
-        "40",
-        "138"
-    ],
-    [
-        "130A",
+        "4B",
         "140"
     ],
     [
-        "32",
-        "154"
+        "6A",
+        "140"
     ],
     [
-        "48",
-        "154"
-    ],
-    [
-        "64",
-        "154"
-    ],
-    [
-        "64",
-        "160"
-    ],
-    [
-        "130A",
-        "160"
-    ],
-    [
-        "130A",
-        "162"
-    ],
-    [
-        "138",
-        "162"
-    ],
-    [
-        "130A",
-        "165A"
-    ],
-    [
-        "130A",
-        "165B"
-    ],
-    [
-        "130A",
-        "170"
-    ],
-    [
-        "154",
-        "170"
-    ],
-    [
-        "130A",
-        "171"
-    ],
-    [
-        "130A",
-        "174A"
-    ],
-    [
-        "32",
+        "PSTAT120A",
         "176A"
     ],
     [
-        "176A",
-        "176B"
+        "120A",
+        "178"
     ],
     [
-        "176B",
-        "176C"
+        "CS24",
+        "CS32"
+    ],
+    [
+        "CS32",
+        "CS130A"
+    ],
+    [
+        "CS16",
+        "CS40"
+    ],
+    [
+        "CS40",
+        "CS130A"
+    ],
+    [
+        "CS32",
+        "CS48"
+    ],
+    [
+        "CS32",
+        "CS56"
+    ],
+    [
+        "CS16",
+        "CS64"
+    ],
+    [
+        "CS24",
+        "CS111"
+    ],
+    [
+        "CS130A",
+        "CS130B"
+    ],
+    [
+        "CS40",
+        "CS138"
+    ],
+    [
+        "CS130A",
+        "CS140"
+    ],
+    [
+        "CS32",
+        "CS154"
+    ],
+    [
+        "CS48",
+        "CS154"
+    ],
+    [
+        "CS64",
+        "CS154"
+    ],
+    [
+        "CS64",
+        "CS160"
+    ],
+    [
+        "CS130A",
+        "CS160"
+    ],
+    [
+        "CS130A",
+        "CS162"
+    ],
+    [
+        "CS138",
+        "CS162"
+    ],
+    [
+        "CS130A",
+        "CS165A"
+    ],
+    [
+        "CS130A",
+        "CS165B"
+    ],
+    [
+        "CS130A",
+        "CS170"
+    ],
+    [
+        "CS154",
+        "CS170"
+    ],
+    [
+        "CS130A",
+        "CS171"
+    ],
+    [
+        "CS130A",
+        "CS174A"
+    ],
+    [
+        "CS32",
+        "CS176A"
+    ],
+    [
+        "CS176A",
+        "CS176B"
+    ],
+    [
+        "CS176B",
+        "CS176C"
     ],   
     [
-        "170",
-        "177"
+        "CS170",
+        "CS177"
     ],    
     [
-        "24",
-        "178"
+        "CS24",
+        "CS178"
     ],    
     [
-        "40",
-        "178"
+        "CS40",
+        "CS178"
     ],  
     [
-        "130A",
-        "180"
+        "CS130A",
+        "CS180"
     ],
     [
-        "56",
-        "184"
+        "CS56",
+        "CS184"
     ],
     [
-        "56",
-        "189A"
+        "CS56",
+        "CS189A"
     ],
     [
-        "189A",
-        "189B"
+        "CS189A",
+        "CS189B"
     ],
 ]
