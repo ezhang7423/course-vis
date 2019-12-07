@@ -1,4 +1,4 @@
-`8. Introduction to Computer Science
+x = `8. Introduction to Computer Science
 (4) KHARITONOVA, MIRZA, MATNI
  Not open for credit to students who have completed Computer Science 16 or Engineering 3.
 Legal repeat for CMPSC 5AA-ZZ.
@@ -512,3 +512,19 @@ advanced students.
 GRADUATE COURSES
 Graduate courses for this major can be found in
 the UCSB General Catalog.`
+
+find = /^(.*?)\..*/
+
+print = (thing) => {console.log(thing)}
+
+obj = {};
+
+x = x.split("\n\n");
+
+for (thing of x){
+  key = find.exec(thing)[0]
+  firstLn = thing.split('\n')[0]
+  descrip = thing.substr(thing.split('\n')[0].length+1, thing.length)
+  obj['CS'+firstLn] = {'description': descrip};
+}
+print(obj)
