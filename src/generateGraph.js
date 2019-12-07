@@ -81,7 +81,7 @@ function init() {
 
     // define the Link template to be minimal
     myDiagram.linkTemplate =$(go.Link,
-        { routing: go.Link.Orthogonal, corner: 10 },
+        { routing: go.Link.AvoidsNodes, corner: 10 },
         $(go.Shape, { strokeWidth: 3, stroke: "#555"},
             new go.Binding("stroke", "color")));
 
@@ -119,8 +119,9 @@ function generateLinks() {
 
 function layout() {
     let lay = myDiagram.layout;
-    lay.direction = 90;
-    lay.packOption = 4;
+    lay.aggressiveOption = go.LayeredDigraphLayout.AggressiveMore;
+    lay.direction = 0;
+    lay.packOption = 5;
     lay.setsPortSpots = true;
 }
 

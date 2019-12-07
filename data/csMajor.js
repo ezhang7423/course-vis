@@ -242,6 +242,10 @@ const courses = [
 ]
 
 const valuePairs = [
+     [
+        "CS8",
+        "CS16"
+    ],
     [
         "CS16",
         "CS24"

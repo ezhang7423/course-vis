@@ -41,10 +41,6 @@ function updateModalContent(courseKey) {
         </div>
         <div class="info">
             <strong>Course Description:</strong> ${getLongDescription(data.text)}
-        ${
-            data.text === "4A" ? `<iframe width="100%" src="https://www.youtube.com/embed/F3N5EkMX_ks" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-                : ""
-        }
         </div>`;
     course.innerHTML = html;
 }
