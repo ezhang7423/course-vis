@@ -20,27 +20,39 @@ function nodeDoubleClick(_, obj) {
 }
 
 function getLongDescription(course_key) {
+ 
     for (let i in x){
-        if (i.includes("CS " + course_key)){
+        if (i.includes(course_key)){
+          
             return x[i].description
         }
     }
     return ""
 }
+String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.replace(new RegExp(search, 'g'), replacement);
+};
 
 function updateModalContent(courseKey) {
     let data = getCourseDetail(courseKey);
     let course = document.querySelector(".course")
 
     let html;
+    htmlFriendlyDescription = getLongDescription(data.text).replaceAll('\n', '<br>')
+    for (let i in x){
+        if (i.includes(courseKey)){
+            short = i;
+        }
+    }
     html = `<div class="header">
             <div class="name">
-                CMPSC ${data.text}
+                ${data.text}
             </div>
-            <span class="unit">Unit: 4.0</span>
+            <span class= "unit"></span>
         </div>
         <div class="info">
-            <strong>Course Description:</strong> ${getLongDescription(data.text)}
+            <strong>Course Description:</strong> ${short}<br> ${htmlFriendlyDescription}
         </div>`;
     course.innerHTML = html;
 }
@@ -61,7 +73,6 @@ function renderBottom(courseContent) {
     }
     let html = "";
     courseContent.forEach((v)=>{
-        console.log(v);
         html += `
         <div class="container" onclick="goNewCourse('${v.text}')" id="${v.text + '_course'}">
             ${v.text}
@@ -77,7 +88,6 @@ function renderTop(courseContent) {
     }
     let html = "";
     courseContent.forEach((v)=>{
-        console.log(v);
         html += `
         <div class="container" onclick="goNewCourse('${v.text}')" id="${v.text + '_course'}">
             ${v.text}
