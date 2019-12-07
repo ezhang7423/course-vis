@@ -335,7 +335,7 @@ const valuePairs = [
         "CS64"
     ],
     [
-        "CS165A",
+        "CS130A",
         "CS165B"
     ],
     [
