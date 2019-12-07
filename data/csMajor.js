@@ -124,6 +124,14 @@ const courses = [
         "description": "fill l8r"
     },
     {
+        "text": "CS165A",
+        "description": "fill l8r"
+    },
+    {
+        "text": "CS165B",
+        "description": "fill l8r"
+    },
+    {
         "text": "CS190AA-ZZ",
         "description": "fill l8r"
     },
@@ -167,74 +175,74 @@ const courses = [
         "text": "PSTAT120B",
         "description": "fill l8r"
     },
-    {
-        "text": "ECE130A",
-        "description": "fill l8r"
-    },
-    {
-        "text": "ECE130B",
-        "description": "fill l8r"
-    },
-    {
-        "text": "ECE130C",
-        "description": "fill l8r"
-    },
-    {
-        "text": "ECE152A",
-        "description": "fill l8r"
-    },
-    {
-        "text": "MATH119B",
-        "description": "fill l8r"
-    },
-    {
-        "text": "ECE160",
-        "description": "fill l8r"
-    },
-    {
-        "text": "ECE178",
-        "description": "fill l8r"
-    },
-    {
-        "text": "MATH108A",
-        "description": "fill l8r"
-    },
-    {
-        "text": "MATH108B",
-        "description": "fill l8r"
-    },
-    {
-        "text": "MATH119A",
-        "description": "fill l8r"
-    },
-    {
-        "text": "MATH119B",
-        "description": "fill l8r"
-    },
-    {
-        "text": "MATH124A",
-        "description": "fill l8r"
-    },
-    {
-        "text": "MATH124B",
-        "description": "fill l8r"
-    },
-    {
-        "text": "PSTAT122",
-        "description": "fill l8r"
-    },
-    {
-        "text": "PSTAT130",
-        "description": "fill l8r"
-    },
-    {
-        "text": "PSTAT160A",
-        "description": "fill l8r"
-    },
-    {
-        "text": "PSTAT160B",
-        "description": "fill l8r"
-    },
+    // {
+    //     "text": "ECE130A",
+    //     "description": "fill l8r"
+    // },
+    // {
+    //     "text": "ECE130B",
+    //     "description": "fill l8r"
+    // },
+    // {
+    //     "text": "ECE130C",
+    //     "description": "fill l8r"
+    // },
+    // {
+    //     "text": "ECE152A",
+    //     "description": "fill l8r"
+    // },
+    // {
+    //     "text": "MATH119B",
+    //     "description": "fill l8r"
+    // },
+    // {
+    //     "text": "ECE160",
+    //     "description": "fill l8r"
+    // },
+    // {
+    //     "text": "ECE178",
+    //     "description": "fill l8r"
+    // },
+    // {
+    //     "text": "MATH108A",
+    //     "description": "fill l8r"
+    // },
+    // {
+    //     "text": "MATH108B",
+    //     "description": "fill l8r"
+    // },
+    // {
+    //     "text": "MATH119A",
+    //     "description": "fill l8r"
+    // },
+    // {
+    //     "text": "MATH119B",
+    //     "description": "fill l8r"
+    // },
+    // {
+    //     "text": "MATH124A",
+    //     "description": "fill l8r"
+    // },
+    // {
+    //     "text": "MATH124B",
+    //     "description": "fill l8r"
+    // },
+    // {
+    //     "text": "PSTAT122",
+    //     "description": "fill l8r"
+    // },
+    // {
+    //     "text": "PSTAT130",
+    //     "description": "fill l8r"
+    // },
+    // {
+    //     "text": "PSTAT160A",
+    //     "description": "fill l8r"
+    // },
+    // {
+    //     "text": "PSTAT160B",
+    //     "description": "fill l8r"
+    // },
     {
         "text": "ENGR101",
         "description": "fill l8r"
@@ -319,6 +327,10 @@ const valuePairs = [
         "CS64"
     ],
     [
+        "CS165A",
+        "CS165B"
+    ],
+    [
         "CS24",
         "CS111"
     ],
@@ -366,10 +378,10 @@ const valuePairs = [
         "CS130A",
         "CS165A"
     ],
-    [
-        "CS130A",
-        "CS165B"
-    ],
+    // [
+    //     "CS130A",
+    //     "CS165B"
+    // ],
     [
         "CS130A",
         "CS170"

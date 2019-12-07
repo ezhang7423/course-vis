@@ -21,7 +21,7 @@ function nodeDoubleClick(_, obj) {
 
 function getLongDescription(course_key) {
     for (let i in x){
-        if (i.includes("MATH " + course_key)){
+        if (i.includes("CS " + course_key)){
             return x[i].description
         }
     }
@@ -35,7 +35,7 @@ function updateModalContent(courseKey) {
     let html;
     html = `<div class="header">
             <div class="name">
-                Math ${data.text}
+                CMPSC ${data.text}
             </div>
             <span class="unit">Unit: 4.0</span>
         </div>
