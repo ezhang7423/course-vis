@@ -52,7 +52,7 @@ function init() {
     myDiagram =
         $(go.Diagram, "myDiagramDiv",  // must be the ID or reference to div
             {
-                initialAutoScale: go.Diagram.UniformToFill,
+                initialAutoScale: go.Diagram.Uniform,
                 layout: $(go.LayeredDigraphLayout),
                 isReadOnly: true,
                 // other Layout properties are set by the layout function, defined below

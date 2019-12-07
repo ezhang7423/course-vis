@@ -5,177 +5,187 @@ const courses = [
     },
     {
         "text": "CS16",
-        "description": "fill l8r"
+        "description": "Problem Solving with Computers I"
     },
     {
         "text": "CS24",
-        "description": "fill l8r"
+        "description": "Problem Solving with Computers II"
     },
     {
         "text": "CS32",
-        "description": "fill l8r"
+        "description": "Object Oriented Design and Implementation"
     },
     {
         "text": "CS40",
-        "description": "fill l8r"
+        "description": "Foundations of Computer Science"
     },
     {
         "text": "CS48",
-        "description": "fill l8r"
-    },
-    {
-        "text": "CS48",
-        "description": "fill l8r"
+        "description": "Computer Science Project"
     },
     {
         "text": "CS56",
-        "description": "fill l8r"
+        "description": "Advanced Applications Programming"
     },
     {
         "text": "CS64",
-        "description": "fill l8r"
+        "description": "Computer Organization and Logic Design"
     },
     {
         "text": "CS111",
-        "description": "fill l8r"
+        "description": "Introduction to Computational Science"
     },
     {
         "text": "CS140",
-        "description": "fill l8r"
+        "description": "Parallel Scientific Computing"
     },
     {
         "text": "CS130A",
-        "description": "fill l8r"
+        "description": "Data Structures and Algorithms I"
     },
     {
         "text": "CS130B",
-        "description": "fill l8r"
+        "description": "Data Structures and Algorithms II"
     },
     {
         "text": "CS138",
-        "description": "fill l8r"
+        "description": "Automata and Formal Languages"
+    },
+    {
+        "text": "CS153A",
+        "description": "Hardware/Software Interface"
     },
     {
         "text": "CS154",
-        "description": "fill l8r"
+        "description": "Computer Architecture"
     },
     {
         "text": "CS160",
-        "description": "fill l8r"
+        "description": "Translation of Programming Languages"
     },
     {
         "text": "CS162",
-        "description": "fill l8r"
+        "description": "Programming Languages"
     },
     {
         "text": "CS170",
-        "description": "fill l8r"
+        "description": "Operating Systems"
     },
     {
         "text": "CS171",
-        "description": "fill l8r"
+        "description": "Distributed Systems"
     },
     {
         "text": "CS174A",
-        "description": "fill l8r"
-    },
-    {
-        "text": "CS174B",
-        "description": "fill l8r"
+        "description": "Fundamentals of Database Systems"
     },
     {
         "text": "CS176A",
-        "description": "fill l8r"
+        "description": "Introduction to Computer Communication Networks"
     },
     {
         "text": "CS176B",
-        "description": "fill l8r"
+        "description": "Network Computing"
     },
     {
         "text": "CS176C",
-        "description": "fill l8r"
+        "description": "Advanced Topics in Internet Computing"
     },
     {
         "text": "CS177",
-        "description": "fill l8r"
+        "description": "Computer Security"
     },
     {
         "text": "CS178",
-        "description": "fill l8r"
+        "description": "Introduction to Cryptography"
     },
     {
         "text": "CS180",
-        "description": "fill l8r"
+        "description": "Computer Graphics"
+    },
+    {
+        "text": "CS181",
+        "description": "Introduction to Computer Vision"
     },
     {
         "text": "CS184",
-        "description": "fill l8r"
+        "description": "Mobile Application Development"
     },
     {
         "text": "CS185",
-        "description": "fill l8r"
+        "description": "Human-Computer Interaction"
     },
     {
         "text": "CS189A",
-        "description": "fill l8r"
+        "description": "Senior Computer Systems Project"
     },
     {
         "text": "CS189B",
-        "description": "fill l8r"
+        "description": "Senior Computer Systems Project"
     },
     {
         "text": "CS165A",
-        "description": "fill l8r"
+        "description": "Artificial Intelligence"
     },
     {
         "text": "CS165B",
-        "description": "fill l8r"
+        "description": "Machine Learning"
     },
     {
         "text": "CS190AA-ZZ",
-        "description": "fill l8r"
+        "description": "Special Topics in Computer Science"
     },
     {
         "text": "CS192",
-        "description": "fill l8r"
+        "description": "Projects in Computer Science"
+    },
+    {
+        "text": "CS193",
+        "description": "Internship in Industry"
     },
     {
         "text": "CS196",
-        "description": "fill l8r"
+        "description": "Undergraduate Research"
     },
     {
-        "text": "CS196B",
-        "description": "fill l8r"
+        "text": "CS199",
+        "description": "Independent Studies in Computer Science"
     },
     {
         "text": "MATH3A",
-        "description": "fill l8r"
+        "description": "Calculus with Applications, First Course"
     },
     {
         "text": "MATH3B",
-        "description": "fill l8r"
+        "description": "Calculus with Applications, Second Course"
     },
     {
         "text": "MATH4A",
-        "description": "fill l8r"
+        "description": "Linear Algebra with Applications"
     },
     {
         "text": "MATH4B",
-        "description": "fill l8r"
+        "description": "Differential Equations"
     },
     {
         "text": "MATH6A",
-        "description": "fill l8r"
+        "description": "Vector Calculus with Applications, First Course"
     },
     {
         "text": "PSTAT120A",
-        "description": "fill l8r"
+        "description": "Probability and Statistics"
     },
     {
         "text": "PSTAT120B",
-        "description": "fill l8r"
+        "description": "Probability and Statistics"
     },
-    // {
+    {
+        "text": "ENGR101",
+        "description": "Ethics in Engineering"
+    },
+]
+
+ // {
     //     "text": "ECE130A",
     //     "description": "fill l8r"
     // },
@@ -243,16 +253,14 @@ const courses = [
     //     "text": "PSTAT160B",
     //     "description": "fill l8r"
     // },
-    {
-        "text": "ENGR101",
-        "description": "fill l8r"
-    },
-]
-
 const valuePairs = [
      [
         "CS8",
         "CS16"
+    ],
+    [
+        "CS32",
+        "CS48"
     ],
     [
         "CS16",
