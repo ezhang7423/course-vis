@@ -20,13 +20,10 @@ function nodeDoubleClick(_, obj) {
 }
 
 function getLongDescription(course_key) {
- 
-    for (let i in x){
-        if (i.includes(course_key)){
-          
-            return x[i].description
-        }
-    }
+    
+    // if x[course_key] != undefined{
+    //     return x[course_key].descr
+    // }
     return ""
 }
 String.prototype.replaceAll = function(search, replacement) {
@@ -36,28 +33,25 @@ String.prototype.replaceAll = function(search, replacement) {
 
 function updateModalContent(courseKey) {
     let data = getCourseDetail(courseKey);
+    console.log(data)
     let course = document.querySelector(".course")
-
     let html;
     htmlFriendlyDescription = getLongDescription(data.text).replaceAll('\n', '<br>')
     for (let i in x){
         if (i.includes(courseKey)){
             short = i;
         }
-        if (courseKey == "CS16"){
-            short = "CS16. Problem Solving with Computers I";
-        }
+        // if (courseKey == "CS16"){
+        //     short = "CS16. Problem Solving with Computers I";
+        // }
     }
-    html = `<div class="header">
-            <div class="name">
-                ${data.text}
-            </div>
-            <span class= "unit"></span>
-        </div>
-        <div class="info">
-            <strong>Course Description:</strong> ${short}<br> ${htmlFriendlyDescription}
-        </div>`;
-    course.innerHTML = html;
+    course.innerHTML = `<div style><div class = "header">
+    <div class = "name">
+    ${data.description}
+    </div>
+    </div>
+    <div style = "margin: 10px"
+    ${x[courseKey]["desc"]}</div></div>`
 }
 
 function openModal(currentCourse) {

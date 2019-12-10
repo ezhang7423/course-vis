@@ -10,6 +10,19 @@ nav{
 .ucsb{
     margin-top: 2px;
 }
+
+
+.label-above{
+    margin:6px 0 4px 0;
+    font-weight:bold;
+}
+
+.label-inline{
+    display:inline;
+    padding:0 2px 0 0;
+    font-weight:bold;
+}
+
 input{
     background-color: transparent;
     border-width: 0 0 1px 0;
