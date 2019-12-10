@@ -13,17 +13,15 @@ let x =
     'CS16. Problem Solving with Computers I': {
       description: '(4) KHARITONOVA, MIRZA\n' +
         'Prerequisite: Math 3A with a grade of C or better\n' +
-        '(may be taken concurrently), Computer Science 8 or\n' +
-        'Engineering 3 or Electrical and Computer Engineering 3 with a grade of C or better, another universitylevel intro to programming course, or significant prior\n' +
-        'programming experience.\n' +
-        ' Legal repeat of CMPSC 10.\n' +
-        ' Fundamental building blocks for solving\n' +
+        '(may be taken concurrently), Computer Science 8\n' +
+        'or Engineering 3 or Electrical and Computer Engineering 3 with a grade of C or better, another university level intro to programming course, or significant prior' +
+        ' programming experience. Fundamental building blocks for solving\n' +
         'problems using computers. Topics include basic\n' +
         'computer organization and programming constructs:\n' +
-        'memory CPU, binary arithmetic, variables, expressions, statements, conditionals, iteration, functions,\n' +
-        'parameters, recursion, primitive and composite data\n' +
-        'types, and basic operating system and debugging\n' +
-        'tool.'
+        'memory CPU, binary arithmetic, variables, expressions, statements, conditionals, iteration, functions,' +
+        'parameters, recursion, primitive and composite data' +
+        'types, and basic operating system and debugging' +
+        ' tools.'
     },
     'CS24. Problem Solving with Computers II': {
       description: '(4) AGRAWAL, MIRZA\n' +
