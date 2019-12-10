@@ -44,6 +44,9 @@ function updateModalContent(courseKey) {
         if (i.includes(courseKey)){
             short = i;
         }
+        if (courseKey == "CS16"){
+            short = "CS16. Problem Solving with Computers I";
+        }
     }
     html = `<div class="header">
             <div class="name">
