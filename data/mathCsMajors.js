@@ -18,25 +18,14 @@ let x = {
         prerequisites: 'Math 2B or 3B or 3BI with a minimum grade of C.',
         description: 'Systems of linear equations, matrix algebra, determinants, vector spaces and subspaces, basis and dimension, linear transformations, eigenvalues and eigenvectors, diagonalization, and orthogonality.'
     },
-    'MATH 4AI. Inquiry Based Linear Algebra': {
-        units: '4',
-        prerequisites: 'Mathematics 3B or Mathematics 3BI with a minimum grade of C.',
-        enrollmentComments: 'Misc: Not open for credit to students who have completed Math 3C or Math 4A.',
-        description: 'Honors version of Mathematics 4A. Mathematical inquiry course is developed through problem solving and discovery.'
-    },
     'MATH 4B. Differential Equations': {
         units: '4',
         prerequisites: 'Math 4A or Math 4AI with a minimum grade of C.',
         description: 'First and second order differential equations, separation of variables, linear differential equations, systems of first order equations, nonlinear differential equations and stability.'
     },
-    'MATH 4BI. Inquiry Based Differential Equations': {
-        units: '4',
-        prerequisites: 'Mathematics 3C, 3CI, 4A, or 4AI with a minimum grade of C.',
-        enrollmentComments: 'Misc: Not open for credit to students who have completed Math 4B or 5A.',
-        description: 'Honors version of Mathematics 4B. Mathematical inquiry course is developed through problem solving and discovery.'
-    },
     'MATH 6A. Vector Calculus with Applications, First Course': {
         units: '4',
         prerequisites: 'Mathematics 4A (or 4AI) or Mathematics 5A (or 5AI) with a letter grade of Cor better.',
         description: 'Calculus of functions of several variables, vector-valued functions of one variable, scalar and vector fields, integration along paths, double and triple integrals, integration over surfaces, properties, and applications of integrals, and classical integration theorems of vector calculus.'
-    },
+    }
+}
