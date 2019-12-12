@@ -61,10 +61,9 @@ function updateModalContent(courseKey) {
 function externalCSContent(courseKey) {
     let course = document.querySelector(".course")
     for (let course in outsideCS) {
-        if (course.substr(0, 4) == "MATH") cou = course.substr(0, 7)
-        else if (course.substr(0, 4) == "ENGR") cou = course.substr(0, 8)
-        else cou = course.substr(0, 10)
-        cou = cou.replace(/\s/g, '')
+        firstPeriod = /^([^.]+)/
+        couS = firstPeriod.exec(course)[0]
+        cou = couS.replace(/\s/g, '')
         title = course.split('.')[1]
         title = title.substr(1, title.length)
         if (courseKey == cou) {
@@ -78,7 +77,7 @@ function externalCSContent(courseKey) {
                 <div style = "margin: 10px"
                 <div>
                 <div>
-                    <div class="numJS label-inline"> Number: </div> ${cou}
+                    <div class="numJS label-inline"> Number: </div> ${couS}
                 </div>
                 <div class="field
                         field-name-field-course-level">
