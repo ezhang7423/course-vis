@@ -79,7 +79,6 @@ p{
 .course{
     border: solid 4px #004D9F;
     border-radius: 10px;
-    height: 60vh;
     margin: 20px auto;
     box-shadow: 4px 4px 2px rgb(0,0,0, 0.4);
     z-index: 2000000;
@@ -132,6 +131,8 @@ p{
     }
 
 .modal-content {
+    min-height: 60vh;
+    height: fit-content;
     position: absolute;
     top: 45%;
     left: 50%;
