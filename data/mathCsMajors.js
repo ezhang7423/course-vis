@@ -1,4 +1,4 @@
-let x = {
+let outsideCS = {
     'MATH 3A. Calculus with Applications, First Course': {
         units: '4',
         prerequisites: 'Qualifying score on the Mathematics Placement Exam.',
