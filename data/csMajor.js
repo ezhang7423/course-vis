@@ -219,6 +219,11 @@ const valuePairs = [
         "CS130A"
     ],
     [
+        "PSTAT120A",
+        "PSTAT120B"
+
+    ],
+    [
         "MATH4B",
         "CS140"
     ],
