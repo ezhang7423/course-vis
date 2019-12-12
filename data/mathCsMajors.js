@@ -1,4 +1,9 @@
 let outsideCS = {
+    "ENGR 101. Ethics in Engineering": {
+        units: "3",
+        prerequisite: "PreRequisite Comments:	Senior standing in engineering. . See 'PreRequisite' tab",
+        description: "The nature of moral value, normative judgment and moral reasoning. Theories of moral value. The engineer's role in society. Ethics in professional practice. Safety, risk, responsibility. Morality and career choice. Code of ethics. Case studies facilitate the comprehension of the concepts introduced."
+    },
     'MATH 3A. Calculus with Applications, First Course': {
         units: '4',
         prerequisites: 'Qualifying score on the Mathematics Placement Exam.',
@@ -37,10 +42,5 @@ let outsideCS = {
         units: "4",
         prerequisite: "PSTAT 120A with a grade of C or better.",
         description: 'Distribution of sample mean and sample variance; t, chi-squared and F distributions; summarizing data by statistics and graphs; estimation theory for single samples: sufficiency, efficiency, consistency, method of moments, maximum likelihood; hypothesis testing: likelihood ratio test; confidence intervals.'
-    },
-    "ENGR 101: Ethics in Engineering": {
-        units: "3",
-        description: "The nature of moral value, normative judgment and moral reasoning. Theories of moral value. The engineer's role in society. Ethics in professional practice. Safety, risk, responsibility. Morality and career choice. Code of ethics. Case studies facilitate the comprehension of the concepts introduced.",
-        prerequisites: "PreRequisite Comments:	Senior standing in engineering. . See 'PreRequisite' tab"
     }
 }
