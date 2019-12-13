@@ -65,6 +65,24 @@ p{
 h2{
     margin: 0;
 }
+.blue{
+    background: #004D9F;
+}
+
+.black{
+    background: #111517;
+}
+
+.box{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.box-row{
+    display: flex;
+    align-items: center;
+}
 .button{
     border: solid 4px #004D9F;
     border-radius: 10px;
