@@ -62,7 +62,9 @@ canvas:focus{
 p{
     margin: 4px 10px;
 }
-
+h2{
+    margin: 0;
+}
 .button{
     border: solid 4px #004D9F;
     border-radius: 10px;
