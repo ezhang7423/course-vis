@@ -1,4 +1,4 @@
-go.Shape.defineFigureGenerator("RoundedTopRectangle", function(shape, w, h) {
+go.Shape.defineFigureGenerator("RoundedTopRectangle", function (shape, w, h) {
     // this figure takes one parameter, the size of the corner
     var p1 = 5;  // default corner size
     if (shape !== null) {
@@ -21,7 +21,7 @@ go.Shape.defineFigureGenerator("RoundedTopRectangle", function(shape, w, h) {
     return geo;
 });
 
-go.Shape.defineFigureGenerator("RoundedBottomRectangle", function(shape, w, h) {
+go.Shape.defineFigureGenerator("RoundedBottomRectangle", function (shape, w, h) {
     // this figure takes one parameter, the size of the corner
     var p1 = 5;  // default corner size
     if (shape !== null) {
@@ -63,26 +63,27 @@ function init() {
         $(go.Node, "Auto",
             { locationSpot: go.Spot.Center, resizable: true, click: nodeDoubleClick },
             $(go.Shape, "RoundedRectangle", {
-                fill: "#004D9F",
-                stroke: "#004D9F"
-            }),
+                fill: "#fff",
+                // stroke: "#004D9F"
+            }, new go.Binding("fill", "fill")),
             $(go.Panel, "Vertical",
                 $(go.Panel, "Auto",
                     $(go.TextBlock, {
                         font: "22px Arial, Serif",
-                        margin: 10, stroke:"#fff"}, new go.Binding("text", "text")),
+                        margin: 10, stroke: "#fff"
+                    }, new go.Binding("text", "text")),
                 ),
                 $(go.Panel, "Auto",
-                    $(go.Shape, "RoundedBottomRectangle", {fill: "#fff", stroke:"#004D9F", strokeWidth:1}),
-                    $(go.TextBlock, {margin: 10}, new go.Binding("text", "description")),
+                    $(go.Shape, "RoundedBottomRectangle", { fill: "#fff", stroke: "#004D9F", strokeWidth: 1 }),
+                    $(go.TextBlock, { margin: 10 }, new go.Binding("text", "description")),
                 )
             )
         );
 
     // define the Link template to be minimal
-    myDiagram.linkTemplate =$(go.Link,
+    myDiagram.linkTemplate = $(go.Link,
         { routing: go.Link.AvoidsNodes, corner: 10 },
-        $(go.Shape, { strokeWidth: 3, stroke: "#555"},
+        $(go.Shape, { strokeWidth: 3, stroke: "#555" },
             new go.Binding("stroke", "color")));
 
     // generate a tree with the default values
@@ -97,22 +98,38 @@ function generateDigraph() {
     layout();
 }
 
+function isRequired(val) {
+    let requiredCourses = required;
+    fb = false;
+    requiredCourses.forEach((req) => {
+        if (req["text"] == val["text"]) {
+            fb = true
+        }
+    });
+    return fb;
+}
+
 // Creates a random number of randomly colored nodes.
 function generateNodes() {
     const data = courses;
-    data.forEach((v)=>{
+    let result = [];
+    data.forEach((v) => {
+        isRequired(v) ? color = "#111517" : color = "#004D9F"
         v["key"] = v["text"];
+        v["fill"] = color;
+        result.push(v)
     });
-    myDiagram.model.nodeDataArray = data
+    console.log(result)
+    myDiagram.model.nodeDataArray = result;
 }
 
 // Create some link data
 function generateLinks() {
     const pair = valuePairs;
     let result = [];
-    pair.forEach((v)=>{
+    pair.forEach((v) => {
         let color = v[2] ? "#FEBC11" : "#003660";
-        result.push({"from": v[0], "to": v[1], "color": color});
+        result.push({ "from": v[0], "to": v[1], "color": color });
     });
     myDiagram.model.linkDataArray = result;
 }
@@ -127,8 +144,8 @@ function layout() {
 
 function getCourseDetail(course_key) {
     let result = {};
-    courses.forEach((v)=>{
-        if (v["text"] === course_key){
+    courses.forEach((v) => {
+        if (v["text"] === course_key) {
             result = v;
         }
     });
@@ -137,8 +154,8 @@ function getCourseDetail(course_key) {
 
 function getChildCourses(course_key) {
     let result = [];
-    valuePairs.forEach((v)=>{
-        if (v[0] === course_key){
+    valuePairs.forEach((v) => {
+        if (v[0] === course_key) {
             result.push(getCourseDetail(v[1]))
         }
     });
@@ -147,8 +164,8 @@ function getChildCourses(course_key) {
 
 function getParentCourses(course_key) {
     let result = [];
-    valuePairs.forEach((v)=>{
-        if (v[1] === course_key){
+    valuePairs.forEach((v) => {
+        if (v[1] === course_key) {
             result.push(getCourseDetail(v[0]))
         }
     });
