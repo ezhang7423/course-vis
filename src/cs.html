@@ -1,58 +1,59 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>UCSB General Catalog</title>
-    <meta name="description"
-        content="Interactive demonstration of hierarchical layout features by the LayeredDigraphLayout class." />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Interactive demonstration of hierarchical layout features by the LayeredDigraphLayout class."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="../data/requiredCS.js"></script>
     <script src="../vendor/go.js"></script>
     <script src="../data/csMajorDescrip.js"></script>
     <script src="../data/csMajor.js"></script>
     <script src="generateGraph.js"></script>
     <script src="../data/mathCsMajors.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <style>
-        .begin.show-button {
-            opacity: 1;
-            transition: all 1s;
-        }
+      .begin.show-button {
+        opacity: 1;
+        transition: all 1s;
+      }
 
-        .begin {
-            border: 1px solid black;
-            background-color: white;
-            color: black;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            font-family: sans-serif;
-            opacity: 1;
-        }
+      .begin {
+        border: 1px solid black;
+        background-color: white;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        font-family: sans-serif;
+        opacity: 1;
+      }
 
-        .begin:hover {
-            border: 1px solid black;
-            background-color: lightgray;
-            transition: all .5s;
-            color: black;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            font-family: sans-serif;
-        }
+      .begin:hover {
+        border: 1px solid black;
+        background-color: lightgray;
+        transition: all 0.5s;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        font-family: sans-serif;
+      }
 
-        #myDiagramDiv {
-            margin-top: 10px;
-        }
+      #myDiagramDiv {
+        margin-top: 10px;
+      }
     </style>
-</head>
+  </head>
 
-<nav>
+  <nav>
     <img src="../data/ucsblogo.svg" />
     <!-- <div class="rightNav">
         <a href="explore-test.html" class="begin explore">Explore</a>
@@ -61,89 +62,121 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
         </div>
     </div> -->
-</nav>
+  </nav>
 
-<body onload="init()">
+  <body onload="init()">
     <div class="main">
-        <div id="myDiagramDiv" style="border: solid 1px black; background: white; width: 100%; height: 90vh"></div>
-        <div class="right">
-            <h2>General Education Requirements</h2>
-            <div>
-                <p>American History and Institutions</p>
-                <p>UC Entry Level Requirement: English Composition </p>
-                <p>General Subject Areas</p>
-                <p>&emsp; A (2) </p>
-                <p>&emsp; D (2) </p>
-                <p>&emsp; E (2) </p>
-                <p>&emsp; F (1) </p>
-                <p>&emsp; G (1) </p>
+      <div
+        id="myDiagramDiv"
+        style="border: solid 1px black; background: white; width: 100%; height: 90vh"
+      ></div>
+      <div class="right">
+        <h2>General Education Requirements</h2>
+        <div>
+          <p>American History and Institutions</p>
+          <p>UC Entry Level Requirement: English Composition</p>
+          <p>General Subject Areas</p>
+          <p>&emsp; A (2)</p>
+          <p>&emsp; D (2)</p>
+          <p>&emsp; E (2)</p>
+          <p>&emsp; F (1)</p>
+          <p>&emsp; G (1)</p>
 
-                <p>Special Subject Areas Ethnicity</p>
-                <p>&emsp; Ethnicity (1)</p>
-                <p>&emsp; European Traditions or World Cultures (1)</p>
-                <p>&emsp; Writing (4)</p>
-                <p>48 units of Non-Major Electives</p>
-            </div>
-            <h2>Upper Division Major Requirements</h2>
-            <div>
-                <p>28 units of Major Field Electives (includes general subject area courses)</p>
-                <p>CMPSC 111 or 140 </p>
-                <p>CMPSC 160 or 162A </p>
-                <p>ENGR 101</p>
-            </div>
-            <h2>Other Major Requirements</h2>
-            <div>
-                <p>Physics 1, 2, 3+3L</p>
-                <p>Science Electives (2)</p>
-            </div>
-            <div style="position: fixed; bottom: 0; width: 100%; margin: 0 0 20px 0" class="links">
-                <br>
-                <a class="textonly" href="https://eddie.win/fs/csmajor19.pdf" target="_blank">Major Info PDF</a>
-                <br>
-                <a class="textonly" href="https://engineering.ucsb.edu/sites/default/files/docs/19-20%20GEAR_V5_web.pdf"
-                    target="_blank">Gear</a>
-                <br>
-                <a float="right" class="textonly" href="https://my.sa.ucsb.edu/gold/Login.aspx" target="_blank">Gold</a>
+          <p>Special Subject Areas Ethnicity</p>
+          <p>&emsp; Ethnicity (1)</p>
+          <p>&emsp; European Traditions or World Cultures (1)</p>
+          <p>&emsp; Writing (4)</p>
+          <p>48 units of Non-Major Electives</p>
+        </div>
+        <h2>
+          Major Requirements
+          <a
+            class="textonly"
+            href="https://cs.ucsb.edu/education/undergrad/bachelor-science"
+            target="_blank"
+            >(source)</a
+          >
+        </h2>
+        <div>
+          <p>All courses highlighted in black*</p>
+          <p>
+            28 units of
+            <a
+              class="textonly"
+              href="https://cs.ucsb.edu/content/upper-division-electives"
+              target="_blank"
+              >Major Field Electives</a
+            >
+          </p>
+        </div>
+        <div>
+          <p>Physics 1, 2, 3+3L</p>
+          <p>Science Electives (2)</p>
+        </div>
+        <div style="font-size: 12px;">
+          <p>*Caveats</p>
+          <p>CMPSC 111 OR 140</p>
+          <p>CMPSC 160 OR 162A</p>
+        </div>
 
-                <br>
+        <div
+          style="position: fixed; bottom: 0; width: 100%; margin: 0 0 20px 0"
+          class="links"
+        >
+          <br />
+          <a
+            class="textonly"
+            href="https://eddie.win/fs/csmajor19.pdf"
+            target="_blank"
+            >Major Info PDF</a
+          >
+          <br />
+          <a
+            class="textonly"
+            href="https://engineering.ucsb.edu/sites/default/files/docs/19-20%20GEAR_V5_web.pdf"
+            target="_blank"
+            >Gear</a
+          >
+          <br />
+          <a
+            float="right"
+            class="textonly"
+            href="https://my.sa.ucsb.edu/gold/Login.aspx"
+            target="_blank"
+            >Gold</a
+          >
 
-                <!-- <a class="textonly"
+          <br />
+
+          <!-- <a class="textonly"
             href="https://my.sa.ucsb.edu/catalog/2010-2011/Documents/Undergrad%20Major%20Sheets/Computer-Sci-Computational-Geog-Emphasis-BA-2010.pdf"
             target="_blank"
             >Changing your major to CS</a> -->
-            </div>
-            <br>
-            <div>
-                <div class='box-row'>
-                    <div class="black box"></div>
-                    <div>Required Courses</div>
-                </div>
-                <div class='box-row'>
-                    <div class="blue box"></div>
-                    <div>Other</div>
-                </div>
-            </div>
         </div>
+        <br />
+        <div>
+          <div class="box-row">
+            <div class="black box"></div>
+            <div>Required Courses</div>
+          </div>
+          <div class="box-row">
+            <div class="blue box"></div>
+            <div>Other</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="modal">
-        <div class="course modal-content">
-
-        </div>
+      <div class="course modal-content"></div>
     </div>
 
     <div class="parentContainer">
-        <div class="parents">
-
-        </div>
+      <div class="parents"></div>
     </div>
     <div class="childContainer">
-        <div class="children">
-
-        </div>
+      <div class="children"></div>
     </div>
     <script src="modal.js"></script>
-</body>
-
-
+  </body>
 </html>
